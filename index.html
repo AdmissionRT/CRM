@@ -1132,11 +1132,11 @@ footer{
         <div class="field-card"><div class="field-dot"></div><div><strong>Stage</strong><span>Giai đoạn hiện tại — theo 8 giai đoạn phía trên.</span></div></div>
         <div class="field-card later"><div class="field-dot"></div><div><strong>Fee sheet</strong><span>Bảng chi tiết các khoản phí — nội dung đầy đủ ở phần Payment.</span></div></div>
         <div class="field-card later"><div class="field-dot"></div><div><strong>Deduction</strong><span>Khoản giảm trừ/ưu đãi áp dụng — nội dung đầy đủ ở phần Payment.</span></div></div>
-        <div class="field-card later"><div class="field-dot"></div><div><strong>Application form</strong><span>Hồ sơ nhập học đính kèm — nội dung đầy đủ ở phần Payment.</span></div></div>
+        <div class="field-card"><div class="field-dot"></div><div><strong>Application form</strong><span>Hồ sơ nhập học đính kèm trên Opportunity (học bạ, giấy khai sinh...).</span></div></div>
         <div class="field-card later"><div class="field-dot"></div><div><strong>Payment</strong><span>Thông tin thanh toán học phí — nội dung đầy đủ ở phần Payment.</span></div></div>
         <div class="field-card"><div class="field-dot"></div><div><strong>History</strong><span>Lịch sử thao tác, thay đổi trên Opportunity.</span></div></div>
       </div>
-      <div class="note"><strong>Lưu ý:</strong> 4 trường <strong>Fee sheet, Deduction, Application form, Payment</strong> sẽ được hướng dẫn chi tiết ở phần Payment sắp tới — ở đây chỉ cần biết tên và vị trí của chúng trên Opportunity.</div>
+      <div class="note"><strong>Lưu ý:</strong> 3 trường <strong>Fee sheet, Deduction, Payment</strong> sẽ được giải thích ngay bên dưới — ở đây chỉ cần biết tên và vị trí của chúng trên Opportunity.</div>
 
       <h3>Auto Follow-up Opportunity — quy trình chăm sóc theo từng giai đoạn</h3>
       <p>Tương tự Lead, hệ thống tự tạo Task nhắc việc theo từng giai đoạn Opportunity. Tra theo đúng thứ tự Stage:</p>
@@ -1181,6 +1181,34 @@ footer{
           <p class="step-meta">Due: 24h sau khi có kết quả thi đạt</p>
         </div>
       </div>
+
+      <h3>Payment — những điều Tuyển Sinh cần biết</h3>
+      <p>Việc tạo/thu Payment, đối chiếu ngân hàng và xử lý hoàn trả do <strong>phòng Kế toán (AR)</strong> phụ trách. TS/Admin TS chỉ cần đọc hiểu để trả lời phụ huynh đúng và biết khi nào cần báo AR xử lý — không tự thao tác các phần này.</p>
+
+      <h4>5 loại Payment trên Opportunity</h4>
+      <div class="field-grid">
+        <div class="field-card"><div class="field-dot"></div><div><strong>Enrollment</strong><span>Phí nhập học. Sau khi thu, Contact (học sinh) được hệ thống cấp mã học sinh.</span></div></div>
+        <div class="field-card"><div class="field-dot"></div><div><strong>Full fee</strong><span>Phí học bắt buộc — hệ thống tự sinh khi Opportunity chuyển sang giai đoạn Payment.</span></div></div>
+        <div class="field-card"><div class="field-dot"></div><div><strong>Order fee</strong><span>Các phí tự chọn (đồng phục, giáo trình, ăn, xe...) đặt qua cổng SPS360.</span></div></div>
+        <div class="field-card"><div class="field-dot"></div><div><strong>Refund</strong><span>Khoản hoàn trả — hiển thị dưới dạng số âm trên Opportunity.</span></div></div>
+        <div class="field-card"><div class="field-dot"></div><div><strong>Deposit</strong><span>Khoản tạm thu — phát sinh từ thu tiền hoặc từ case cấn trừ.</span></div></div>
+      </div>
+
+      <h4>Fee sheet là gì</h4>
+      <p>Là nơi định nghĩa các khoản phí cần thu và chính sách giảm giá áp dụng cho Opportunity — gồm học phí, phí nhập học trễ, phí ăn/xe, giảm giá anh chị em (Siblings), nhân viên (Staff), học bổng... Riêng khoản giảm giá đóng sớm (Promotion Milestone) hệ thống tự động cập nhật theo thời hạn đã cấu hình sẵn, không cần TS can thiệp.</p>
+
+      <h4>Deduction là gì</h4>
+      <p>Là khoản điều chỉnh chênh lệch phát sinh trên Payment — thường do phí ngân hàng khi phụ huynh chuyển khoản — để số tiền thực nhận khớp với số cần thu. Việc tạo Deduction và áp Voucher do AR xử lý khi đối soát Payment.</p>
+
+      <div class="note">Cách xem trạng thái Payment (đã thu/chưa thu) trực tiếp trên Opportunity sẽ bổ sung ảnh minh hoạ khi có — hiện TS cần xác nhận với AR nếu không chắc tình trạng đóng tiền của phụ huynh.</div>
+
+      <h4>3 loại Case hoàn trả — chỉ cần biết tên để báo đúng AR</h4>
+      <div class="field-grid">
+        <div class="field-card"><div class="field-dot"></div><div><strong>Optional refund</strong><span>Hoàn Deposit hoặc Enrollment fee — áp dụng khi 2 khoản này chưa cấn trừ công nợ, chưa có case hoàn trả trước đó.</span></div></div>
+        <div class="field-card"><div class="field-dot"></div><div><strong>DropOut / Service Refund</strong><span>Hoàn các dịch vụ khác (ngoài Deposit, Enrollment fee) khi học sinh nghỉ/huỷ dịch vụ.</span></div></div>
+        <div class="field-card"><div class="field-dot"></div><div><strong>Attendance Refund</strong><span>Hoàn tiền ăn khi học sinh nghỉ phép, đối chiếu theo điểm danh.</span></div></div>
+      </div>
+      <div class="note"><strong>Lưu ý:</strong> TS không tự tạo Case hoàn trả. Khi phụ huynh có nhu cầu hoàn tiền, ghi nhận thông tin và báo AR xử lý đúng loại case tương ứng.</div>
 
       <h3>Đặt lịch tham quan / Entrance Test</h3>
       <p>Khi Opportunity đến bước School Tour hoặc Entrance Test, dùng <strong>New Task</strong> (Call, Send Letter, Send Quote, Other, Fee - Calendar Test, SMS) cho việc cần làm không cố định giờ, hoặc <strong>New Event</strong> khi cần đặt lịch hẹn có ngày giờ cụ thể — cả hai thao tác ngay trong tab Activity của Opportunity.</p>
