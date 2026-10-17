@@ -678,6 +678,16 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
   .actions-row .ico{transform:rotate(90deg);margin:0 auto;}
 }
 
+/* Stage card có ảnh minh họa: bấm để xem màn hình thật trên CRM */
+.stage-card.has-img{cursor:zoom-in;transition:border-color .15s,transform .15s;}
+.stage-card.has-img:hover{border-color:var(--gold);transform:translateY(-2px);}
+.stage-card .stage-shot{display:none;}
+.stage-card.has-img::after{
+  content:"Xem trên CRM";display:inline-block;margin-top:10px;font-size:11px;font-weight:800;
+  color:var(--gold-deep);background:var(--gold-tint);border:1px solid var(--gold-line);border-radius:20px;padding:3px 10px;
+}
+.stage-card.last.has-img::after{color:var(--navy);background:var(--gold);border-color:var(--gold);}
+
 </style>
 </head>
 <body>
@@ -715,11 +725,10 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
       <li><a data-view="p3" data-title="03 · Khách hàng tiềm năng"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></span><span class="nv-txt">Chăm sóc khách hàng tiềm năng</span><span class="n">03</span></a></li>
       <li><a data-view="p4" data-title="04 · PHHS đang theo học"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-school"/></svg></span><span class="nv-txt">Chăm sóc PHHS đang theo học</span><span class="n">04</span></a></li>
       <li><a data-view="p5" data-title="05 · Thao tác hằng ngày"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg></span><span class="nv-txt">Thao tác hằng ngày</span><span class="n">05</span></a></li>
-      <li><a data-view="p6" data-title="06 · Lỗi thường gặp"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg></span><span class="nv-txt">Lỗi thường gặp</span><span class="n">06</span></a></li>
+      <li><a data-view="p6" data-title="06 · Báo cáo cơ bản"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></span><span class="nv-txt">Báo cáo (Report) cơ bản</span><span class="n">06</span></a></li>
       <li class="nav-sep">Tra cứu khi cần</li>
-      <li><a data-view="p7" data-title="07 · Nghiệp vụ phụ"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg></span><span class="nv-txt">Nghiệp vụ phụ</span><span class="n">07</span></a></li>
-      <li><a data-view="p8" data-title="08 · Báo cáo cơ bản"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></span><span class="nv-txt">Báo cáo (Report) cơ bản</span><span class="n">08</span></a></li>
-      <li><a data-view="p9" data-title="09 · Hỏi nhanh đáp gọn"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg></span><span class="nv-txt">Hỏi nhanh đáp gọn</span><span class="n">09</span></a></li>
+      <li><a data-view="p7" data-title="07 · Lỗi thường gặp"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg></span><span class="nv-txt">Lỗi thường gặp</span><span class="n">07</span></a></li>
+      <li><a data-view="p8" data-title="08 · Hỏi nhanh đáp gọn"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg></span><span class="nv-txt">Hỏi nhanh đáp gọn</span><span class="n">08</span></a></li>
     </ul>
   </nav>
 
@@ -742,7 +751,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
         <div class="stat-box"><div class="stat-num">15</div><div class="stat-label">Task Result cần nắm</div></div>
         <div class="stat-box gold"><div class="stat-num">3</div><div class="stat-label">Nhóm khách hàng cần phân biệt</div></div>
         <div class="stat-box"><div class="stat-num">4</div><div class="stat-label">Tình huống Lead cần nhớ</div></div>
-        <div class="stat-box gold"><div class="stat-num">9</div><div class="stat-label">Phần nội dung</div></div>
+        <div class="stat-box gold"><div class="stat-num">8</div><div class="stat-label">Phần nội dung</div></div>
       </div>
 
       <div class="home-cols">
@@ -774,23 +783,22 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
             <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Phân biệt 15 Task Result và Stage tương ứng.</span></li>
             <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Biết cách xử lý Lead trùng, không tạo Lead rác.</span></li>
             <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Xử lý Case đủ 4 bước, đúng hạn.</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Tránh được 5 lỗi thường gặp ở Phần 06.</span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Tránh được 5 lỗi thường gặp ở Phần 07.</span></li>
           </ul>
         </div>
       </div>
 
       <div class="section-toc-title"><svg class="ico" aria-hidden="true"><use href="#i-list"/></svg> Nội dung tài liệu</div>
-      <p class="toc-hint">Nên đọc lần lượt từ Phần 01 đến Phần 06. Phần 07 đến 09 dùng để tra cứu khi cần.</p>
+      <p class="toc-hint">Nên đọc lần lượt từ Phần 01 đến Phần 06. Phần 07 và 08 dùng để tra cứu khi cần.</p>
       <div class="toc-grid">
         <a class="toc-card" data-view="p1"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></span><span class="tc-num">01</span></div><div><h4>Tổng quan CRM</h4><p>3 nhóm khách hàng, thuật ngữ cơ bản và hành trình từ Lead đến Opportunity.</p></div></a>
         <a class="toc-card" data-view="p2"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="tc-num">02</span></div><div><h4>Chăm sóc khách hàng mới <span class="tag soft">Lead</span></h4><p>Auto Follow-up Leads, 15 Task Result và xử lý Lead trùng.</p></div></a>
         <a class="toc-card" data-view="p3"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></span><span class="tc-num">03</span></div><div><h4>Chăm sóc khách hàng tiềm năng <span class="tag soft">Opportunity</span></h4><p>8 giai đoạn sau khi Convert, đến lúc ghi danh.</p></div></a>
         <a class="toc-card" data-view="p4"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-school"/></svg></span><span class="tc-num">04</span></div><div><h4>Chăm sóc PHHS đang theo học <span class="tag soft">Current</span></h4><p>Xử lý Case cho học sinh đang học; ghi nhận học sinh đã nghỉ.</p></div></a>
         <a class="toc-card" data-view="p5"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg></span><span class="tc-num">05</span></div><div><h4>Thao tác hằng ngày</h4><p>Lịch làm việc chuẩn từ đầu giờ đến cuối ngày.</p></div></a>
-        <a class="toc-card" data-view="p6"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg></span><span class="tc-num">06</span></div><div><h4>Lỗi thường gặp</h4><p>5 lỗi phổ biến và cách làm đúng.</p></div></a>
-        <a class="toc-card" data-view="p7"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg></span><span class="tc-num">07</span></div><div><h4>Nghiệp vụ phụ</h4><p>Referral, Promotion, Mass Approval: tóm tắt để tham khảo.</p></div></a>
-        <a class="toc-card" data-view="p8"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></span><span class="tc-num">08</span></div><div><h4>Báo cáo (Report) cơ bản</h4><p>4 nhóm báo cáo và các bước tạo báo cáo.</p></div></a>
-        <a class="toc-card" data-view="p9"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg></span><span class="tc-num">09</span></div><div><h4>Hỏi nhanh đáp gọn</h4><p>Những câu hỏi nhân viên mới hay gặp nhất.</p></div></a>
+        <a class="toc-card" data-view="p6"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></span><span class="tc-num">06</span></div><div><h4>Báo cáo (Report) cơ bản</h4><p>4 nhóm báo cáo và các bước tạo báo cáo.</p></div></a>
+        <a class="toc-card" data-view="p7"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg></span><span class="tc-num">07</span></div><div><h4>Lỗi thường gặp <span class="tag soft">Tra cứu</span></h4><p>5 lỗi phổ biến và cách làm đúng.</p></div></a>
+        <a class="toc-card" data-view="p8"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg></span><span class="tc-num">08</span></div><div><h4>Hỏi nhanh đáp gọn <span class="tag soft">Tra cứu</span></h4><p>Những câu hỏi nhân viên mới hay gặp nhất.</p></div></a>
       </div>
     </div>
 
@@ -1455,7 +1463,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
 
       <div class="pagenav">
         <a data-view="p4"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Phần 04</a>
-        <a class="next" data-view="p6">Phần 06: Lỗi thường gặp <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        <a class="next" data-view="p6">Phần 06: Báo cáo cơ bản <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       </div>
     </div>
 
@@ -1463,128 +1471,9 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
     <div class="view" id="view-p6">
       <a class="crumb" data-view="home"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Về trang chủ</a>
       <div class="banner">
-        <span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg></span>
-        <div class="banner-body">
-          <div class="banner-eyebrow">Phần 06</div>
-          <h2>Lỗi thường gặp và cách xử lý</h2>
-          <p>5 lỗi nhân viên mới hay mắc nhất. Đọc để tránh ngay từ đầu.</p>
-        </div>
-      </div>
-
-      <div class="cards c2">
-        <div class="scn">
-          <div class="scn-head"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><h4>Đóng Task mà không chọn Task Result</h4></div>
-          <div class="scn-body">
-            <div class="scn-row"><b>Hậu quả</b><span>Hệ thống không tạo Task tiếp theo, Lead bị bỏ sót.</span></div>
-            <div class="scn-row"><b>Làm đúng</b><span><strong>Luôn chọn Task Result</strong> trước khi nhấn Done.</span></div>
-          </div>
-        </div>
-        <div class="scn">
-          <div class="scn-head"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><h4>Quên điền Next Contact Date khi phụ huynh hẹn lại</h4></div>
-          <div class="scn-body">
-            <div class="scn-row"><b>Hậu quả</b><span>Task tiếp theo tạo sai ngày, bạn gọi sai lịch hẹn.</span></div>
-            <div class="scn-row"><b>Làm đúng</b><span>Khi chọn "Yêu cầu liên hệ lại vào ngày đã hẹn", điền ngay Next Contact Date.</span></div>
-          </div>
-        </div>
-        <div class="scn">
-          <div class="scn-head"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><h4>Muốn Convert Lead nhưng chưa đóng Task đúng</h4></div>
-          <div class="scn-body">
-            <div class="scn-row"><b>Hậu quả</b><span>Nút Convert bị khóa (Ready To Convert = False). Hệ thống báo: <em>"Please complete the open task with the result 'Đã đủ điều kiện Convert Opportunity' to unlock the conversion process."</em></span></div>
-            <div class="scn-row"><b>Làm đúng</b><span>Đóng Task với Task Result = "Đã đủ điều kiện Convert Opportunity" trước.</span></div>
-          </div>
-        </div>
-        <div class="scn">
-          <div class="scn-head"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><h4>Không ghi Comment sau khi tư vấn</h4></div>
-          <div class="scn-body">
-            <div class="scn-row"><b>Hậu quả</b><span>Owner mới không nắm được lịch sử khi nhận bàn giao Lead.</span></div>
-            <div class="scn-row"><b>Làm đúng</b><span>Ghi Comment tóm tắt ngắn gọn sau mỗi lần liên hệ.</span></div>
-          </div>
-        </div>
-        <div class="scn">
-          <div class="scn-head"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><h4>Chọn sai Case Record Type khi tạo Case</h4></div>
-          <div class="scn-body">
-            <div class="scn-row"><b>Hậu quả</b><span>Case chuyển nhầm bộ phận, phụ huynh chờ lâu và trễ hạn 4h/24h/48h.</span></div>
-            <div class="scn-row"><b>Làm đúng</b><span>Kiểm tra kỹ danh sách Record Type trước khi tạo Case (xem bảng ở Phần 04).</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pagenav">
-        <a data-view="p5"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Phần 05</a>
-        <a class="next" data-view="p7">Phần 07: Nghiệp vụ phụ <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-      </div>
-    </div>
-
-    <!-- ============ PHẦN 7 ============ -->
-    <div class="view" id="view-p7">
-      <a class="crumb" data-view="home"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Về trang chủ</a>
-      <div class="banner">
-        <span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg></span>
-        <div class="banner-body">
-          <div class="banner-eyebrow">Phần 07 · Tham khảo</div>
-          <h2>Nghiệp vụ phụ</h2>
-          <p>Tóm tắt các tính năng liên quan. Bạn không thao tác hằng ngày, nhưng cần biết để hỗ trợ phụ huynh khi cần.</p>
-        </div>
-      </div>
-
-      <div id="accordion">
-        <div class="accordion-item">
-          <div class="accordion-head"><span class="ico-tile sm"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span><span class="ah-txt">Referral Management (Agent / Guardian)</span><span class="plus">+</span></div>
-          <div class="accordion-body"><div class="accordion-body-inner">
-            <ul>
-              <li>Quản lý thông tin đối tác liên kết (Agent) và số lượng voucher của từng Agent.</li>
-              <li>Người giới thiệu là <strong>Agent</strong>: mỗi năm hệ thống tự tính hoa hồng (commission), ghi nhận mã Voucher và Commission Amount.</li>
-              <li>Người giới thiệu là <strong>Guardian</strong>: hệ thống tự tính hoa hồng và tạo Payment âm gắn vào Voucher Member.</li>
-              <li>Có thể gửi thủ công qua Application Form (từ Email Offer Letter), hoặc qua web form/landing page bằng Referral Code.</li>
-            </ul>
-          </div></div>
-        </div>
-
-        <div class="accordion-item">
-          <div class="accordion-head"><span class="ico-tile sm"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg></span><span class="ah-txt">Promotion và Promotion Item</span><span class="plus">+</span></div>
-          <div class="accordion-body"><div class="accordion-body-inner">
-            <ul>
-              <li>Thiết lập chương trình khuyến mãi cho học sinh (Promotion) và chi tiết ưu đãi theo từng khoản phí (Promotion Item).</li>
-              <li>Ngày hết hạn ưu đãi lấy theo Milestone Date, áp dụng cho Promotion Item có Record Type = Payment Milestone Item, và hiển thị trên SPS360.</li>
-            </ul>
-          </div></div>
-        </div>
-
-        <div class="accordion-item">
-          <div class="accordion-head"><span class="ico-tile sm"><svg class="ico" aria-hidden="true"><use href="#i-refresh"/></svg></span><span class="ah-txt">Đồng bộ Application Form sang Contact Student</span><span class="plus">+</span></div>
-          <div class="accordion-body"><div class="accordion-body-inner">
-            <ul>
-              <li>Khi phụ huynh gửi Application Form, hệ thống tự đồng bộ Parent Information, Other Guardian và địa chỉ liên lạc vào Contact Student.</li>
-              <li>Hệ thống cũng đồng bộ bữa ăn (sáng, trưa, xế) và Program tương ứng với Campus Group qua Opportunity.</li>
-            </ul>
-          </div></div>
-        </div>
-
-        <div class="accordion-item">
-          <div class="accordion-head"><span class="ico-tile sm"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg></span><span class="ah-txt">Mass Approval và Optional Refund</span><span class="plus">+</span></div>
-          <div class="accordion-body"><div class="accordion-body-inner">
-            <ul>
-              <li>Mass Approval hỗ trợ lọc theo Campus và lọc Case theo Campus Group.</li>
-              <li>Hệ thống chặn tạo trùng Case Optional Refund trên cùng một Contact Student hoặc Payment.</li>
-              <li>Payment có gắn Case (Refund, Deposit, Enrollment Fee) sẽ bị ẩn trên SPS360, mục Học Phí.</li>
-            </ul>
-          </div></div>
-        </div>
-      </div>
-
-      <div class="pagenav">
-        <a data-view="p6"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Phần 06</a>
-        <a class="next" data-view="p8">Phần 08: Báo cáo cơ bản <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-      </div>
-    </div>
-
-    <!-- ============ PHẦN 8 ============ -->
-    <div class="view" id="view-p8">
-      <a class="crumb" data-view="home"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Về trang chủ</a>
-      <div class="banner">
         <span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></span>
         <div class="banner-body">
-          <div class="banner-eyebrow">Phần 08</div>
+          <div class="banner-eyebrow">Phần 06</div>
           <h2>Báo cáo (Report) cơ bản</h2>
           <p>Các nhóm báo cáo thường dùng và cách tạo báo cáo trên Salesforce.</p>
         </div>
@@ -1633,18 +1522,74 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
       </table>
 
       <div class="pagenav">
-        <a data-view="p7"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Phần 07</a>
-        <a class="next" data-view="p9">Phần 09: Hỏi nhanh đáp gọn <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        <a data-view="p5"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Phần 05</a>
+        <a class="next" data-view="p7">Phần 07: Lỗi thường gặp <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       </div>
     </div>
 
-    <!-- ============ PHẦN 9 ============ -->
-    <div class="view" id="view-p9">
+    <!-- ============ PHẦN 7 ============ -->
+    <div class="view" id="view-p7">
+      <a class="crumb" data-view="home"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Về trang chủ</a>
+      <div class="banner">
+        <span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg></span>
+        <div class="banner-body">
+          <div class="banner-eyebrow">Phần 07 · Tra cứu</div>
+          <h2>Lỗi thường gặp và cách xử lý</h2>
+          <p>5 lỗi nhân viên mới hay mắc nhất. Đọc để tránh ngay từ đầu.</p>
+        </div>
+      </div>
+
+      <div class="cards c2">
+        <div class="scn">
+          <div class="scn-head"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><h4>Đóng Task mà không chọn Task Result</h4></div>
+          <div class="scn-body">
+            <div class="scn-row"><b>Hậu quả</b><span>Hệ thống không tạo Task tiếp theo, Lead bị bỏ sót.</span></div>
+            <div class="scn-row"><b>Làm đúng</b><span><strong>Luôn chọn Task Result</strong> trước khi nhấn Done.</span></div>
+          </div>
+        </div>
+        <div class="scn">
+          <div class="scn-head"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><h4>Quên điền Next Contact Date khi phụ huynh hẹn lại</h4></div>
+          <div class="scn-body">
+            <div class="scn-row"><b>Hậu quả</b><span>Task tiếp theo tạo sai ngày, bạn gọi sai lịch hẹn.</span></div>
+            <div class="scn-row"><b>Làm đúng</b><span>Khi chọn "Yêu cầu liên hệ lại vào ngày đã hẹn", điền ngay Next Contact Date.</span></div>
+          </div>
+        </div>
+        <div class="scn">
+          <div class="scn-head"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><h4>Muốn Convert Lead nhưng chưa đóng Task đúng</h4></div>
+          <div class="scn-body">
+            <div class="scn-row"><b>Hậu quả</b><span>Nút Convert bị khóa (Ready To Convert = False). Hệ thống báo: <em>"Please complete the open task with the result 'Đã đủ điều kiện Convert Opportunity' to unlock the conversion process."</em></span></div>
+            <div class="scn-row"><b>Làm đúng</b><span>Đóng Task với Task Result = "Đã đủ điều kiện Convert Opportunity" trước.</span></div>
+          </div>
+        </div>
+        <div class="scn">
+          <div class="scn-head"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><h4>Không ghi Comment sau khi tư vấn</h4></div>
+          <div class="scn-body">
+            <div class="scn-row"><b>Hậu quả</b><span>Owner mới không nắm được lịch sử khi nhận bàn giao Lead.</span></div>
+            <div class="scn-row"><b>Làm đúng</b><span>Ghi Comment tóm tắt ngắn gọn sau mỗi lần liên hệ.</span></div>
+          </div>
+        </div>
+        <div class="scn">
+          <div class="scn-head"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><h4>Chọn sai Case Record Type khi tạo Case</h4></div>
+          <div class="scn-body">
+            <div class="scn-row"><b>Hậu quả</b><span>Case chuyển nhầm bộ phận, phụ huynh chờ lâu và trễ hạn 4h/24h/48h.</span></div>
+            <div class="scn-row"><b>Làm đúng</b><span>Kiểm tra kỹ danh sách Record Type trước khi tạo Case (xem bảng ở Phần 04).</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagenav">
+        <a data-view="p6"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Phần 06</a>
+        <a class="next" data-view="p8">Phần 08: Hỏi nhanh đáp gọn <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </div>
+
+    <!-- ============ PHẦN 8 ============ -->
+    <div class="view" id="view-p8">
       <a class="crumb" data-view="home"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Về trang chủ</a>
       <div class="banner">
         <span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg></span>
         <div class="banner-body">
-          <div class="banner-eyebrow">Phần 09</div>
+          <div class="banner-eyebrow">Phần 08 · Tra cứu</div>
           <h2>Hỏi nhanh đáp gọn</h2>
           <p>Những câu hỏi nhân viên mới hay gặp nhất.</p>
         </div>
@@ -1676,7 +1621,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
       </div></div>
 
       <div class="pagenav">
-        <a data-view="p8"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Phần 08</a>
+        <a data-view="p7"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Phần 07</a>
         <a class="next" data-view="home">Về trang chủ <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       </div>
 
@@ -1812,6 +1757,15 @@ document.querySelectorAll('.zoomable').forEach(img => {
   });
 });
 modal.addEventListener('click', () => modal.classList.remove('open'));
+document.querySelectorAll('.stage-card.has-img').forEach(card => {
+  card.addEventListener('click', () => {
+    var shot = card.querySelector('.stage-shot');
+    if (!shot) return;
+    modalImg.src = shot.src;
+    modalImg.alt = shot.alt;
+    modal.classList.add('open');
+  });
+});
 
 </script>
 </body>
