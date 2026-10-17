@@ -413,7 +413,7 @@ table.board td{
   font-weight:500;
 }
 table.board tr:last-child td{border-bottom:none;}
-table.board td.code{font-family:var(--font);font-weight:800;color:var(--gold-deep);}
+table.board td.code{font-family:var(--font);font-weight:800;color:var(--gold-deep);white-space:nowrap;}
 table.board td.due{font-family:var(--font);font-weight:600;font-size:12.5px;color:var(--text-soft);white-space:nowrap;}
 .badge{
   display:inline-block;
@@ -1139,87 +1139,46 @@ footer{
       <div class="note"><strong>Lưu ý:</strong> 4 trường <strong>Fee sheet, Deduction, Application form, Payment</strong> sẽ được hướng dẫn chi tiết ở phần Payment sắp tới — ở đây chỉ cần biết tên và vị trí của chúng trên Opportunity.</div>
 
       <h3>Auto Follow-up Opportunity — quy trình chăm sóc theo từng giai đoạn</h3>
-      <p>Tương tự Lead, hệ thống tự tạo Task nhắc việc theo từng giai đoạn Opportunity. Theo đúng thứ tự:</p>
+      <p>Tương tự Lead, hệ thống tự tạo Task nhắc việc theo từng giai đoạn Opportunity. Tra theo đúng thứ tự Stage:</p>
 
-      <div class="steps">
-        <div class="step">
-          <div class="step-num"></div>
-          <div class="step-body">
-            <h4>OPTY-1 · Qualification — Tiềm năng ghi danh</h4>
-            <p>Sau khi Convert, TS tiếp tục liên hệ thúc đẩy, tư vấn chuyên sâu hơn về mối quan tâm của PH, mời Phụ huynh tham quan trường / tham gia hoạt động sự kiện của trường. Gửi thông tin về chương trình ưu đãi / Cơ sở vật chất / sự kiện OpenDay / Testimonial. Chốt lịch đến trường tham quan / gặp Ban Giám hiệu / tham gia OpenDay.</p>
-            <p class="step-meta">Due: 48h sau Convert · Nhắc: 9h &amp; 15h ngày due · Loại: Call + Email/SMS/ZMS</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num"></div>
-          <div class="step-body">
-            <h4>OPTY-2 · School Tour — Đặt lịch tham quan</h4>
-            <p>TS liên hệ mời Phụ huynh tham quan trường. Lịch cố định (Open Day): gửi thông tin lịch + confirm tham dự. Lịch linh hoạt: đặt theo ngày phụ huynh chọn. Gửi SMS/Zalo nhắc lịch trước 1 ngày + sáng ngày tham quan. Sau tour: gọi follow up hỏi cảm nhận trong 24h.</p>
-            <p class="step-meta">Due: 48h sau Convert · Nhắc: 9h &amp; 15h ngày due · Loại: Call + Email/SMS/ZMS</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num"></div>
-          <div class="step-body">
-            <h4>OPTY-3 · Entrance Test — Đặt lịch thi đầu vào</h4>
-            <p>Bắt buộc 100% học sinh. Thông báo lịch thi + hướng dẫn chuẩn bị. Gửi Email/SMS/Zalo xác nhận lịch thi. Nhắc lịch thi trước 2 ngày + sáng ngày thi. Sau thi: gọi hỏi thăm kết quả / cảm nhận trong 24h.</p>
-            <p class="step-meta">Due: 72h sau Tour · Nhắc: 9h &amp; 15h ngày due · Loại: Call + Email/SMS/ZMS</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num"></div>
-          <div class="step-body">
-            <h4>OPTY-4 · Waiting List — Thông báo + duy trì nurturing</h4>
-            <p>Áp dụng khi cấp lớp đã đủ chỉ tiêu. Thông báo tình trạng Waiting List rõ ràng cho phụ huynh. Gửi Zalo/Email cập nhật tình trạng mỗi 2 tuần. Khi có chỗ trống: liên hệ ngay trong 2h để xác nhận ý định.</p>
-            <p class="step-meta">Due: Theo thực tế · Nhắc: Mỗi 2 tuần · Loại: Call + ZMS + Email</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num"></div>
-          <div class="step-body">
-            <h4>OPTY-5 · Fee Offer — Gửi thư mời nhập học + học phí</h4>
-            <p>Sau khi học sinh đạt kết quả thi: gửi email/Zalo thư mời nhập học + bảng học phí chi tiết trong 24h. Gọi điện xác nhận phụ huynh đã nhận và giải đáp thắc mắc. Nếu phụ huynh chưa phản hồi: sau 2 ngày gọi + nhắn Zalo, sau 4 ngày gọi lần 2, sau 6 ngày gọi lần 3. Ghi nhận deadline xác nhận nhập học.</p>
-            <p class="step-meta">Due: 24h sau kết quả · Nhắc: 9h &amp; 15h ngày due · Loại: Call + ZMS + Email</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num"></div>
-          <div class="step-body">
-            <h4>OPTY-6 · Document — Hướng dẫn &amp; theo dõi nộp hồ sơ</h4>
-            <p>Sau khi phụ huynh xác nhận nhập học: gửi checklist hồ sơ đầy đủ qua Zalo/Email. Đặt deadline nộp hồ sơ cụ thể. Nhắc nhở 3 ngày trước deadline. Nếu chưa nộp đủ: gọi xác nhận tình trạng + hỗ trợ.</p>
-            <p class="step-meta">Due: 72h sau xác nhận · Nhắc: 9h &amp; 15h ngày due · Loại: Call + ZMS + Email</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num"></div>
-          <div class="step-body">
-            <h4>OPTY-7 · Payment — Xác nhận &amp; theo dõi đóng học phí</h4>
-            <p>Sau khi đã đóng phí ghi danh: gửi thông tin tài khoản + hướng dẫn đóng tiền. Nhắc đóng học phí 3 ngày trước deadline. Sau khi đóng: gửi Zalo/Email xác nhận + thông tin nhập học. Nếu chưa đóng đúng hạn: gọi xác nhận lý do + hỗ trợ.</p>
-            <p class="step-meta">Due: Theo deadline · Nhắc: 3 ngày trước deadline · Loại: Call + ZMS + Email</p>
-          </div>
-        </div>
+      <div class="board-wrap">
+        <div class="board-title">Auto Follow-up Opportunity <span class="dim">OPTY-1 — OPTY-7</span></div>
+        <table class="board">
+          <thead>
+            <tr><th>Mã</th><th>Giai đoạn</th><th>Việc cần làm</th><th>Due Date</th><th>Nhắc nhở</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="code">OPTY-1</td><td>Qualification</td><td>Liên hệ tư vấn thêm, mời tham quan trường/sự kiện, gửi thông tin ưu đãi &amp; testimonial.</td><td class="due">48h sau Convert</td><td>9h &amp; 15h ngày due</td></tr>
+            <tr><td class="code">OPTY-2</td><td>School Tour</td><td>Mời đặt lịch tham quan, nhắc trước 1 ngày + sáng hôm đó, gọi hỏi cảm nhận sau tour (trong 24h).</td><td class="due">48h sau Convert</td><td>9h &amp; 15h ngày due</td></tr>
+            <tr><td class="code">OPTY-3</td><td>Entrance Test</td><td>Thông báo lịch thi + hướng dẫn chuẩn bị, nhắc trước 2 ngày + sáng ngày thi, hỏi kết quả sau 24h.</td><td class="due">72h sau Tour</td><td>9h &amp; 15h ngày due</td></tr>
+            <tr><td class="code">OPTY-4</td><td>Waiting List</td><td>Thông báo rõ tình trạng chờ, cập nhật mỗi 2 tuần, liên hệ ngay trong 2h khi có chỗ trống.</td><td class="due">Theo thực tế</td><td>Mỗi 2 tuần</td></tr>
+            <tr><td class="code">OPTY-5</td><td>Fee Offer</td><td>Gửi thư mời nhập học + học phí trong 24h, gọi xác nhận. Nếu chưa phản hồi: gọi lại ngày 2, 4, 6.</td><td class="due">24h sau kết quả</td><td>9h &amp; 15h ngày due</td></tr>
+            <tr><td class="code">OPTY-6</td><td>Document</td><td>Gửi checklist hồ sơ, đặt deadline nộp cụ thể, nhắc 3 ngày trước hạn.</td><td class="due">72h sau xác nhận</td><td>9h &amp; 15h ngày due</td></tr>
+            <tr><td class="code">OPTY-7</td><td>Payment</td><td>Gửi thông tin tài khoản + hướng dẫn đóng tiền, nhắc 3 ngày trước deadline, xác nhận sau khi đóng.</td><td class="due">Theo deadline</td><td>3 ngày trước deadline</td></tr>
+          </tbody>
+        </table>
       </div>
 
       <h3>Kịch bản đặc biệt</h3>
-      <p>3 tình huống phát sinh ngoài luồng chuẩn, cần xử lý riêng:</p>
+      <p>3 tình huống phát sinh ngoài luồng chuẩn phía trên, cần xử lý riêng:</p>
       <div class="card-grid">
         <div class="scenario-card">
-          <div class="tag-row"><h4>School Tour — Phụ huynh huỷ hẹn</h4><span class="badge working">Working</span></div>
-          <p>Ghi nhận lý do huỷ vào CRM. Thể hiện sự thông cảm + chủ động đề xuất 2–3 khung giờ mới. Xác nhận lịch mới và gửi lại Zalo/SMS.</p>
-          <p>Không giới hạn số lần đặt lại — nhưng nếu phụ huynh huỷ <strong>≥ 3 lần liên tiếp không lý do → Nurturing</strong> (vẫn duy trì chăm sóc, không chuyển Lost trừ khi phụ huynh từ chối rõ ràng).</p>
-          <p class="step-meta">Due: 24h sau huỷ · Nhắc: 9h &amp; 15h ngày due</p>
+          <h4>Phụ huynh huỷ hẹn School Tour</h4>
+          <p><strong>Xử lý:</strong> ghi nhận lý do huỷ vào CRM → thể hiện thông cảm, đề xuất 2–3 khung giờ mới → xác nhận lịch mới, gửi lại Zalo/SMS.</p>
+          <p><strong>Lưu ý:</strong> không giới hạn số lần đặt lại lịch. Nhưng nếu phụ huynh huỷ từ 3 lần liên tiếp trở lên mà không có lý do, chuyển Opportunity sang chăm sóc dạng Nurturing (vẫn tiếp tục liên hệ, chưa đóng hồ sơ Lost trừ khi phụ huynh từ chối rõ ràng).</p>
+          <p class="step-meta">Due: 24h sau khi huỷ · Nhắc: 9h &amp; 15h ngày due</p>
         </div>
         <div class="scenario-card">
-          <div class="tag-row"><h4>Entrance Test — Thi không đạt</h4><span class="badge working">Working</span></div>
-          <p>Gọi điện thông báo kết quả trong 24h (không thông báo qua tin nhắn trước). Giải thích rõ các phần chưa đạt, tư vấn lộ trình ôn luyện + đề xuất lịch thi lại. Gửi tài liệu ôn tập qua Zalo/Email.</p>
-          <p>1 tuần sau: gọi hỏi thăm việc ôn luyện. Không giới hạn số lần thi lại — ghi nhận số lần thi vào CRM.</p>
-          <p class="step-meta">Due: 24h sau kết quả</p>
+          <h4>Học sinh thi không đạt</h4>
+          <p><strong>Xử lý:</strong> gọi điện thông báo kết quả trong 24h (không nhắn tin báo trước) → giải thích rõ phần chưa đạt, tư vấn lộ trình ôn luyện, đề xuất lịch thi lại → gửi tài liệu ôn tập qua Zalo/Email → 1 tuần sau gọi hỏi thăm việc ôn luyện.</p>
+          <p><strong>Lưu ý:</strong> không giới hạn số lần thi lại, chỉ cần ghi nhận đầy đủ số lần thi vào CRM.</p>
+          <p class="step-meta">Due: 24h sau khi có kết quả</p>
         </div>
         <div class="scenario-card">
-          <div class="tag-row"><h4>Entrance Test — Thi đạt nhưng chần chừ</h4><span class="badge nurturing">Nurturing</span></div>
-          <p>Nhận diện tín hiệu chần chừ qua cuộc gọi → ghi nhận lý do cụ thể vào CRM. 3 đòn bẩy thuyết phục: <strong>(1)</strong> deadline ưu đãi học phí, <strong>(2)</strong> thông báo sắp hết chỗ, <strong>(3)</strong> gửi testimonial/review phù hợp profile gia đình.</p>
-          <p>Lịch follow up: Ngày 1 xác nhận lý do + gửi đòn bẩy phù hợp → Ngày 3 hỏi lại quyết định → Ngày 5 gọi lần 3 + nhắc deadline/chỗ còn → Ngày 7 nếu vẫn chưa quyết → chuyển chăm sóc mỗi tuần.</p>
-          <p class="step-meta">Due: 24h sau kết quả thi đạt</p>
+          <h4>Học sinh thi đạt nhưng phụ huynh còn chần chừ</h4>
+          <p><strong>Xử lý:</strong> gọi xác định rõ lý do chần chừ, ghi vào CRM, rồi thuyết phục bằng 1 trong 3 cách phù hợp: nhắc deadline ưu đãi học phí, thông báo sắp hết chỗ, hoặc gửi testimonial/review của phụ huynh có hoàn cảnh tương tự.</p>
+          <p><strong>Lịch gọi lại:</strong> ngày 1 (xác nhận lý do + gửi thông tin thuyết phục) → ngày 3 (hỏi lại quyết định) → ngày 5 (nhắc deadline/chỗ còn) → ngày 7 (nếu vẫn chưa quyết, chuyển sang chăm sóc định kỳ mỗi tuần).</p>
+          <p class="step-meta">Due: 24h sau khi có kết quả thi đạt</p>
         </div>
       </div>
 
