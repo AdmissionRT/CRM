@@ -636,6 +636,21 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
 .side-label .ico{width:14px;height:14px;color:var(--gold-deep);}
 .life-step.side{border-style:dashed;border-color:var(--navy-3);min-width:96px;padding:7px 12px;background:#fff;}
 
+/* ---------- Mục lục nhảy nhanh ---------- */
+.toc-inline{background:var(--navy-tint);border:1px solid var(--navy-line);border-radius:var(--radius);padding:16px 18px;margin:-8px 0 30px;}
+.toc-inline-title{display:flex;align-items:center;gap:8px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;}
+.toc-inline-title .ico{width:15px;height:15px;color:var(--gold-deep);}
+.toc-inline-list{display:flex;flex-wrap:wrap;gap:8px;}
+.toc-inline button{
+  font-family:var(--font);font-size:12.5px;font-weight:700;color:var(--navy);background:#fff;border:1px solid var(--navy-line);
+  border-radius:20px;padding:6px 12px;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:6px;
+}
+.toc-inline button b{font-size:10.5px;color:var(--gold-deep);}
+.toc-inline button:hover{background:var(--navy);border-color:var(--navy);color:#fff;}
+.toc-inline button:hover b{color:var(--gold);}
+.view h3,.view h2{scroll-margin-top:16px;}
+.divider-band{scroll-margin-top:16px;}
+
 </style>
 </head>
 <body>
@@ -850,7 +865,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
     </div>
 
     <!-- ============ PHẦN 2 ============ -->
-    <div class="view" id="view-p2">
+    <div class="view" id="view-p2" data-toc>
       <a class="crumb" data-view="home"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Về trang chủ</a>
       <div class="banner">
         <span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
@@ -1094,7 +1109,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
     </div>
 
     <!-- ============ PHẦN 3 ============ -->
-    <div class="view" id="view-p3">
+    <div class="view" id="view-p3" data-toc>
       <a class="crumb" data-view="home"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Về trang chủ</a>
       <div class="banner">
         <span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></span>
@@ -1267,7 +1282,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
     </div>
 
     <!-- ============ PHẦN 4 ============ -->
-    <div class="view" id="view-p4">
+    <div class="view" id="view-p4" data-toc>
       <a class="crumb" data-view="home"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Về trang chủ</a>
       <div class="banner">
         <span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-school"/></svg></span>
@@ -1730,6 +1745,28 @@ document.querySelectorAll('.stage-card.has-img').forEach(card => {
     modalImg.alt = shot.alt;
     modal.classList.add('open');
   });
+});
+
+// ---- Mục lục nhảy nhanh (tự tạo từ các tiêu đề trong trang) ----
+document.querySelectorAll('.view[data-toc]').forEach(view => {
+  var banner = view.querySelector('.banner');
+  var items = view.querySelectorAll('h3, .divider-band');
+  if (!banner || items.length < 3) return;
+  var box = document.createElement('div');
+  box.className = 'toc-inline';
+  box.innerHTML = '<div class="toc-inline-title"><svg class="ico" aria-hidden="true"><use href="#i-list"/></svg>Trong trang này</div><div class="toc-inline-list"></div>';
+  var list = box.querySelector('.toc-inline-list');
+  items.forEach((el, i) => {
+    var h = el.matches('.divider-band') ? el.querySelector('h2') : el;
+    var label = h.textContent.replace(/\s+/g, ' ').trim();
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.innerHTML = '<b>' + String(i + 1).padStart(2, '0') + '</b>';
+    btn.appendChild(document.createTextNode(label));
+    btn.addEventListener('click', () => el.scrollIntoView({behavior: 'smooth', block: 'start'}));
+    list.appendChild(btn);
+  });
+  banner.insertAdjacentElement('afterend', box);
 });
 
 </script>
