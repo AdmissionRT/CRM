@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sổ tay CRM Tuyển Sinh – Training Onboarding</title>
+<script>try{var t=localStorage.getItem("crm_theme_v1");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 <style>
 @font-face{
   font-family:'SVN-Gilroy';
@@ -67,6 +68,9 @@
   --on-navy:#DCE4F5;
   --on-navy-soft:#9FB0D6;
 
+  --surface:#FFFFFF;
+  --ink:#10214A;
+  --sidebar:#10214A;
   --radius:14px;
   --shadow:0 1px 2px rgba(16,33,74,.05),0 6px 20px rgba(16,33,74,.06);
 }
@@ -82,7 +86,7 @@ body{font-family:var(--font);background:var(--white);color:var(--text);line-heig
   width:40px;height:40px;border-radius:12px;background:var(--navy);color:var(--gold);
 }
 .ico-tile .ico{width:22px;height:22px;}
-.ico-tile.gold{background:var(--gold);color:var(--navy);}
+.ico-tile.gold{background:var(--gold);color:var(--ink);}
 .ico-tile.soft{background:var(--gold-tint);color:var(--gold-deep);}
 
 /* ---------- Layout ---------- */
@@ -93,7 +97,7 @@ body{font-family:var(--font);background:var(--white);color:var(--text);line-heig
 
 /* ---------- Sidebar (navy) ---------- */
 .sidebar{
-  width:292px;flex-shrink:0;background:var(--navy);color:var(--on-navy);
+  width:292px;flex-shrink:0;background:var(--sidebar);color:var(--on-navy);
   position:sticky;top:0;height:100vh;overflow-y:auto;padding:26px 0 40px;
   border-right:4px solid var(--gold);
 }
@@ -102,7 +106,7 @@ body{font-family:var(--font);background:var(--white);color:var(--text);line-heig
 .brand{padding:0 24px 22px;border-bottom:1px solid #263f78;margin-bottom:14px;cursor:pointer;}
 .brand-mark{
   display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:13px;
-  background:var(--gold);color:var(--navy);margin-bottom:14px;
+  background:var(--gold);color:var(--ink);margin-bottom:14px;
 }
 .brand-mark .ico{width:26px;height:26px;}
 .brand-eyebrow{font-weight:700;font-size:10.5px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;}
@@ -124,9 +128,9 @@ body{font-family:var(--font);background:var(--white);color:var(--text);line-heig
 .navlist a .nv-txt{flex:1;line-height:1.35;}
 .navlist a .n{font-weight:800;font-size:10.5px;color:var(--on-navy-soft);flex-shrink:0;}
 .navlist a:hover{background:#1A3266;color:#fff;}
-.navlist a.active{background:var(--gold);color:var(--navy);font-weight:800;}
+.navlist a.active{background:var(--gold);color:var(--ink);font-weight:800;}
 .navlist a.active .nv-ico{background:var(--navy);color:var(--gold);}
-.navlist a.active .n{color:var(--navy);}
+.navlist a.active .n{color:var(--ink);}
 .navlist .nav-sep{
   font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy-soft);
   padding:16px 14px 6px;
@@ -142,7 +146,7 @@ body{font-family:var(--font);background:var(--white);color:var(--text);line-heig
   content:"";position:absolute;right:-60px;top:-70px;width:220px;height:220px;border-radius:50%;
   border:26px solid rgba(227,178,60,.16);pointer-events:none;
 }
-.banner .ico-tile{width:58px;height:58px;border-radius:16px;background:var(--gold);color:var(--navy);}
+.banner .ico-tile{width:58px;height:58px;border-radius:16px;background:var(--gold);color:var(--ink);}
 .banner .ico-tile .ico{width:30px;height:30px;}
 .banner-eyebrow{font-weight:700;font-size:11.5px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;}
 .banner h2{font-size:28px;font-weight:800;margin-top:4px;letter-spacing:-.01em;line-height:1.25;color:#fff;}
@@ -157,18 +161,18 @@ body{font-family:var(--font);background:var(--white);color:var(--text);line-heig
 
 /* ---------- Headings / text ---------- */
 h3{
-  display:flex;align-items:center;gap:12px;font-size:20px;font-weight:800;color:var(--navy);
+  display:flex;align-items:center;gap:12px;font-size:20px;font-weight:800;color:var(--ink);
   margin:44px 0 14px;letter-spacing:-.01em;line-height:1.3;
 }
 h3 .ico-tile{width:36px;height:36px;border-radius:11px;}
 h3 .ico-tile .ico{width:20px;height:20px;}
 h3.first{margin-top:6px;}
-h4{font-size:15px;font-weight:800;margin:20px 0 8px;color:var(--navy);}
+h4{font-size:15px;font-weight:800;margin:20px 0 8px;color:var(--ink);}
 p{margin-bottom:12px;font-size:15px;}
 .lead-p{font-size:15.5px;color:var(--text-soft);font-weight:500;margin-bottom:16px;}
 ul{padding-left:20px;margin-bottom:14px;}
 li{margin-bottom:6px;font-size:14.5px;}
-strong{font-weight:800;color:var(--navy);}
+strong{font-weight:800;color:var(--ink);}
 
 /* ---------- Cards ---------- */
 .cards{display:grid;gap:14px;margin:18px 0 24px;}
@@ -176,7 +180,7 @@ strong{font-weight:800;color:var(--navy);}
 .cards.c3{grid-template-columns:repeat(3,1fr);}
 .cards.c4{grid-template-columns:repeat(4,1fr);}
 .card{
-  background:#fff;border:1px solid var(--navy-line);border-radius:var(--radius);padding:20px;
+  background:var(--surface);border:1px solid var(--navy-line);border-radius:var(--radius);padding:20px;
   box-shadow:var(--shadow);position:relative;
 }
 .card.top-navy{border-top:4px solid var(--navy);}
@@ -184,17 +188,17 @@ strong{font-weight:800;color:var(--navy);}
 .card h4{margin:12px 0 6px;font-size:16px;}
 .card p{font-size:13.5px;color:var(--text-soft);font-weight:500;margin-bottom:10px;}
 .card p:last-child{margin-bottom:0;}
-.card.navy{background:var(--navy);border-color:var(--navy);color:var(--on-navy);}
+.card.navy{background:var(--navy);border-color:var(--ink);color:var(--on-navy);}
 .card.navy h4,.card.navy strong{color:#fff;}
 .card.navy p{color:var(--on-navy);}
-.card.gold{background:var(--gold);border-color:var(--gold);color:var(--navy);}
-.card.gold h4,.card.gold strong{color:var(--navy);}
+.card.gold{background:var(--gold);border-color:var(--gold);color:var(--ink);}
+.card.gold h4,.card.gold strong{color:var(--ink);}
 .card.gold p{color:#3a2c07;}
 .card-label{font-weight:800;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);}
 .card.navy .card-label{color:var(--gold);}
-.card.gold .card-label{color:var(--navy);}
+.card.gold .card-label{color:var(--ink);}
 .meta-line{
-  display:flex;gap:8px;align-items:flex-start;font-size:12.5px;font-weight:600;color:var(--navy);
+  display:flex;gap:8px;align-items:flex-start;font-size:12.5px;font-weight:600;color:var(--ink);
   padding-top:10px;margin-top:10px;border-top:1px dashed var(--navy-line);
 }
 .meta-line .ico{width:15px;height:15px;color:var(--gold-deep);margin-top:2px;}
@@ -205,7 +209,7 @@ strong{font-weight:800;color:var(--navy);}
 .card.navy .meta-line span{color:var(--on-navy);}
 .card.navy .meta-line .ico{color:var(--gold);}
 .card.gold .meta-line span{color:#3a2c07;}
-.card.gold .meta-line .ico{color:var(--navy);}
+.card.gold .meta-line .ico{color:var(--ink);}
 a.card{text-decoration:none;color:inherit;cursor:pointer;transition:transform .15s,border-color .15s,box-shadow .15s;}
 a.card:hover{transform:translateY(-2px);border-color:var(--gold);}
 
@@ -230,15 +234,15 @@ a.card:hover{transform:translateY(-2px);border-color:var(--gold);}
 .hero-tags{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap;}
 .tag{
   font-weight:700;font-size:11.5px;padding:5px 11px;border:1px solid var(--navy-line);border-radius:20px;
-  color:var(--navy);background:#fff;display:inline-block;
+  color:var(--ink);background:var(--surface);display:inline-block;
 }
 .hero .tag{background:transparent;border-color:rgba(227,178,60,.6);color:var(--gold);}
-.tag.gold{background:var(--gold);border-color:var(--gold);color:var(--navy);}
-.tag.navy{background:var(--navy);border-color:var(--navy);color:#fff;}
+.tag.gold{background:var(--gold);border-color:var(--gold);color:var(--ink);}
+.tag.navy{background:var(--navy);border-color:var(--ink);color:#fff;}
 .tag.soft{background:var(--gold-tint);border-color:var(--gold-line);color:var(--gold-deep);}
 
 .home-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:40px;}
-.home-card{border-radius:var(--radius);padding:24px 22px;border:1px solid var(--navy-line);background:#fff;box-shadow:var(--shadow);}
+.home-card{border-radius:var(--radius);padding:24px 22px;border:1px solid var(--navy-line);background:var(--surface);box-shadow:var(--shadow);}
 .home-card h3{margin:10px 0 14px;font-size:18px;display:block;}
 .home-card .hc-eyebrow{font-weight:800;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);}
 .home-card ul{list-style:none;padding:0;margin:0;}
@@ -248,15 +252,15 @@ a.card:hover{transform:translateY(-2px);border-color:var(--gold);}
 }
 .home-card li:first-child{border-top:none;padding-top:0;}
 .home-card li .ico{width:17px;height:17px;margin-top:3px;color:var(--gold-deep);}
-.home-card li strong{color:var(--navy);}
+.home-card li strong{color:var(--ink);}
 .home-card.goal{border-top:5px solid var(--navy);}
 .home-card.info{background:var(--gold);border-color:var(--gold);}
-.home-card.info .hc-eyebrow{color:var(--navy);}
-.home-card.info h3{color:var(--navy);}
+.home-card.info .hc-eyebrow{color:var(--ink);}
+.home-card.info h3{color:var(--ink);}
 .home-card.info li{color:#3a2c07;border-top-color:rgba(16,33,74,.25);}
-.home-card.info li .ico{color:var(--navy);}
-.home-card.info li strong{color:var(--navy);}
-.home-card.outcome{background:var(--navy);border-color:var(--navy);}
+.home-card.info li .ico{color:var(--ink);}
+.home-card.info li strong{color:var(--ink);}
+.home-card.outcome{background:var(--navy);border-color:var(--ink);}
 .home-card.outcome .hc-eyebrow{color:var(--gold);}
 .home-card.outcome h3{color:#fff;}
 .home-card.outcome li{color:var(--on-navy);border-top-color:rgba(255,255,255,.2);}
@@ -265,28 +269,28 @@ a.card:hover{transform:translateY(-2px);border-color:var(--gold);}
 
 .section-toc-title{
   display:flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--navy);margin-bottom:6px;
+  text-transform:uppercase;color:var(--ink);margin-bottom:6px;
 }
 .toc-hint{font-size:13px;color:var(--text-soft);font-weight:500;margin-bottom:16px;}
 .toc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;}
 .toc-card{
   display:flex;flex-direction:column;gap:10px;border:1px solid var(--navy-line);border-radius:var(--radius);
-  padding:18px;cursor:pointer;background:#fff;transition:border-color .15s,transform .15s,box-shadow .15s;
+  padding:18px;cursor:pointer;background:var(--surface);transition:border-color .15s,transform .15s,box-shadow .15s;
   text-decoration:none;color:var(--text);box-shadow:var(--shadow);
 }
 .toc-card:hover{border-color:var(--gold);transform:translateY(-2px);}
 .toc-top{display:flex;align-items:center;justify-content:space-between;}
 .toc-card .tc-num{font-weight:800;font-size:13px;color:var(--gold-deep);letter-spacing:.06em;}
-.toc-card h4{font-size:15px;font-weight:800;margin:0 0 4px;color:var(--navy);line-height:1.35;}
+.toc-card h4{font-size:15px;font-weight:800;margin:0 0 4px;color:var(--ink);line-height:1.35;}
 .toc-card p{font-size:12.5px;color:var(--text-soft);margin:0;font-weight:500;line-height:1.5;}
 
 /* ---------- Glossary ---------- */
 .term-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 24px;}
 .term-cell{
-  display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--navy-line);
+  display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--navy-line);
   border-radius:12px;padding:13px 14px;
 }
-.term-cell .abbr{font-weight:800;color:var(--navy);font-size:14px;}
+.term-cell .abbr{font-weight:800;color:var(--ink);font-size:14px;}
 .term-cell .desc{font-size:13px;color:var(--text-soft);margin-top:2px;font-weight:500;line-height:1.5;}
 
 /* ---------- Journey / lifecycle ---------- */
@@ -294,12 +298,12 @@ a.card:hover{transform:translateY(-2px);border-color:var(--gold);}
 .journey-label{font-weight:800;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy-3);margin-bottom:10px;}
 .lifecycle{display:flex;align-items:center;gap:0;overflow-x:auto;padding-bottom:6px;}
 .life-step{
-  background:#fff;border:1.5px solid var(--navy);border-radius:10px;padding:10px 14px;min-width:112px;flex-shrink:0;
+  background:var(--surface);border:1.5px solid var(--navy);border-radius:10px;padding:10px 14px;min-width:112px;flex-shrink:0;
 }
 .life-step .k{font-weight:800;font-size:10px;color:var(--gold-deep);letter-spacing:.08em;text-transform:uppercase;}
-.life-step .v{font-size:13px;font-weight:800;margin-top:2px;color:var(--navy);}
+.life-step .v{font-size:13px;font-weight:800;margin-top:2px;color:var(--ink);}
 .life-step.end{background:var(--gold);border-color:var(--gold);}
-.life-step.end .k{color:var(--navy);}
+.life-step.end .k{color:var(--ink);}
 .life-arrow{color:var(--navy-3);padding:0 6px;flex-shrink:0;display:flex;}
 .life-arrow .ico{width:18px;height:18px;}
 .convert-bridge{display:flex;justify-content:center;margin:10px 0;}
@@ -313,7 +317,7 @@ a.card:hover{transform:translateY(-2px);border-color:var(--gold);}
 .figure{margin:20px 0 28px;}
 .figure img{
   width:100%;border-radius:12px;border:1px solid var(--navy-line);cursor:zoom-in;display:block;
-  box-shadow:var(--shadow);background:#fff;
+  box-shadow:var(--shadow);background:var(--surface);
 }
 .figure-cap{
   font-size:12.5px;color:var(--text-soft);margin-top:8px;font-weight:600;display:flex;
@@ -333,7 +337,7 @@ a.card:hover{transform:translateY(-2px);border-color:var(--gold);}
   padding:16px 20px;margin:0 0 12px;text-decoration:none;color:#fff;transition:transform .15s,box-shadow .15s;
 }
 .link-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(16,33,74,.25);}
-.link-card .ico-tile{background:var(--gold);color:var(--navy);}
+.link-card .ico-tile{background:var(--gold);color:var(--ink);}
 .link-card-body{flex:1;min-width:0;}
 .link-card-title{font-weight:800;font-size:14.5px;color:#fff;line-height:1.4;}
 .link-card-url{font-size:12px;color:var(--gold);margin-top:3px;font-weight:700;}
@@ -348,10 +352,10 @@ a.card:hover{transform:translateY(-2px);border-color:var(--gold);}
 }
 .note > .ico{width:20px;height:20px;color:var(--gold-deep);margin-top:1px;}
 .note > div{flex:1;min-width:0;}
-.note strong{color:var(--navy);}
-.note.info{background:var(--navy-tint);border-color:var(--navy-line);border-left-color:var(--navy);}
-.note.info > .ico{color:var(--navy);}
-.note.warn{background:var(--navy);border-color:var(--navy);border-left-color:var(--gold);color:var(--on-navy);}
+.note strong{color:var(--ink);}
+.note.info{background:var(--navy-tint);border-color:var(--navy-line);border-left-color:var(--ink);}
+.note.info > .ico{color:var(--ink);}
+.note.warn{background:var(--navy);border-color:var(--ink);border-left-color:var(--gold);color:var(--on-navy);}
 .note.warn > .ico{color:var(--gold);}
 .note.warn strong{color:var(--gold);}
 
@@ -362,7 +366,7 @@ table.data th{
   text-align:left;padding:11px 16px;background:var(--navy);color:#fff;font-size:11px;
   text-transform:uppercase;letter-spacing:.08em;font-weight:800;
 }
-table.data td{padding:12px 16px;border-top:1px solid var(--navy-line);vertical-align:top;font-weight:500;background:#fff;}
+table.data td{padding:12px 16px;border-top:1px solid var(--navy-line);vertical-align:top;font-weight:500;background:var(--surface);}
 table.data tbody tr:nth-child(even) td{background:var(--navy-tint);}
 table.data td ul{margin:0;padding-left:18px;}
 table.data td li{font-size:13.5px;margin-bottom:3px;}
@@ -374,7 +378,7 @@ table.data td:first-child{white-space:nowrap;}
   display:flex;justify-content:space-between;align-items:center;gap:12px;
 }
 .board-title .dim{color:var(--gold);}
-table.board{width:100%;border-collapse:collapse;background:#fff;}
+table.board{width:100%;border-collapse:collapse;background:var(--surface);}
 table.board th{
   text-align:left;font-weight:800;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;
   color:var(--gold-deep);padding:10px 16px;background:var(--gold-tint);border-bottom:1px solid var(--gold-line);
@@ -382,23 +386,23 @@ table.board th{
 table.board td{padding:12px 16px;border-bottom:1px solid var(--navy-line);font-size:13.5px;vertical-align:middle;font-weight:500;}
 table.board tbody tr:nth-child(even) td{background:var(--navy-tint);}
 table.board tr:last-child td{border-bottom:none;}
-table.board td.code{font-weight:800;color:var(--navy);white-space:nowrap;}
+table.board td.code{font-weight:800;color:var(--ink);white-space:nowrap;}
 table.board td.due{font-weight:700;font-size:12.5px;color:var(--navy-3);white-space:nowrap;}
-table.board td.stage-name{font-weight:800;color:var(--navy);}
+table.board td.stage-name{font-weight:800;color:var(--ink);}
 
 /* ---------- Badges (stage) — chỉ dùng navy / gold / trắng ---------- */
 .badge{display:inline-block;font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px;white-space:nowrap;border:1.5px solid transparent;}
-.badge.new{background:var(--navy-tint);color:var(--navy);border-color:var(--navy-line);}
+.badge.new{background:var(--navy-tint);color:var(--ink);border-color:var(--navy-line);}
 .badge.working{background:var(--navy);color:#fff;}
 .badge.nurturing{background:var(--gold-tint);color:var(--gold-deep);border-color:var(--gold);}
-.badge.convert{background:var(--gold);color:var(--navy);}
-.badge.unqualified{background:#fff;color:var(--navy);border-color:var(--navy);}
+.badge.convert{background:var(--gold);color:var(--ink);}
+.badge.unqualified{background:var(--surface);color:var(--ink);border-color:var(--ink);}
 .badge.lost{background:var(--navy-tint);color:var(--text-soft);border-color:var(--navy-line);border-style:dashed;}
 
 /* ---------- Scenario cards ---------- */
-.scn{background:#fff;border:1px solid var(--navy-line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;}
+.scn{background:var(--surface);border:1px solid var(--navy-line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;}
 .scn-head{display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--navy);color:#fff;}
-.scn-head .ico-tile{width:34px;height:34px;border-radius:10px;background:var(--gold);color:var(--navy);}
+.scn-head .ico-tile{width:34px;height:34px;border-radius:10px;background:var(--gold);color:var(--ink);}
 .scn-head .ico-tile .ico{width:19px;height:19px;}
 .scn-head h4{margin:0;color:#fff;font-size:15px;line-height:1.35;flex:1;}
 .scn-body{padding:16px 18px 18px;flex:1;}
@@ -409,7 +413,7 @@ table.board td.stage-name{font-weight:800;color:var(--navy);}
   color:var(--gold-deep);padding-top:3px;
 }
 .scn-row > span{flex:1;min-width:0;}
-.scn-row strong{color:var(--navy);}
+.scn-row strong{color:var(--ink);}
 .scn-foot{padding:10px 18px;background:var(--gold-tint);border-top:1px solid var(--gold-line);font-size:12px;font-weight:700;color:var(--gold-deep);display:flex;gap:8px;align-items:center;}
 .scn-foot .ico{width:15px;height:15px;}
 
@@ -422,13 +426,13 @@ table.board td.stage-name{font-weight:800;color:var(--navy);}
 }
 .step:last-child::before{display:none;}
 .step-num{
-  counter-increment:step;flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--navy);
+  counter-increment:step;flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--ink);
   font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;
-  box-shadow:0 0 0 5px #fff;
+  box-shadow:0 0 0 5px var(--white);
 }
 .step-num::before{content:counter(step);}
 .step-body{
-  flex:1;min-width:0;background:#fff;border:1px solid var(--navy-line);border-radius:12px;padding:14px 18px;
+  flex:1;min-width:0;background:var(--surface);border:1px solid var(--navy-line);border-radius:12px;padding:14px 18px;
   box-shadow:var(--shadow);
 }
 .step-body h4{margin:0 0 6px;font-size:15px;}
@@ -437,7 +441,7 @@ table.board td.stage-name{font-weight:800;color:var(--navy);}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
 .chip{
   display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px;
-  background:var(--navy-tint);color:var(--navy);
+  background:var(--navy-tint);color:var(--ink);
 }
 .chip .ico{width:13px;height:13px;color:var(--gold-deep);}
 .chip.gold{background:var(--gold-tint);color:var(--gold-deep);border:1px solid var(--gold-line);}
@@ -446,7 +450,7 @@ table.board td.stage-name{font-weight:800;color:var(--navy);}
 
 /* Flow ngang (3 bước) */
 .flow{display:grid;grid-template-columns:1fr 28px 1fr 28px 1fr;align-items:stretch;gap:0;margin:18px 0 24px;}
-.flow-step{background:#fff;border:1px solid var(--navy-line);border-top:4px solid var(--gold);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);}
+.flow-step{background:var(--surface);border:1px solid var(--navy-line);border-top:4px solid var(--gold);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);}
 .flow-step .fs-num{font-weight:800;font-size:11px;letter-spacing:.12em;color:var(--gold-deep);text-transform:uppercase;}
 .flow-step h4{margin:6px 0 6px;font-size:15.5px;}
 .flow-step p{margin:0;font-size:13px;color:var(--text-soft);font-weight:500;}
@@ -458,36 +462,36 @@ table.board td.stage-name{font-weight:800;color:var(--navy);}
 .actions-row .act{
   background:var(--navy);color:#fff;font-weight:800;font-size:13px;padding:9px 16px;border-radius:10px;
 }
-.actions-row .act.gold{background:var(--gold);color:var(--navy);}
+.actions-row .act.gold{background:var(--gold);color:var(--ink);}
 .actions-row .ico{color:var(--gold-2);width:18px;height:18px;}
 
 /* ---------- Field cards / stage cards ---------- */
 .stage-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 26px;}
-.stage-card{background:#fff;border:1px solid var(--navy-line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);position:relative;}
-.stage-card.last{background:var(--navy);border-color:var(--navy);}
+.stage-card{background:var(--surface);border:1px solid var(--navy-line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);position:relative;}
+.stage-card.last{background:var(--navy);border-color:var(--ink);}
 .stage-card.last h4{color:#fff;}
 .stage-card.last p{color:var(--on-navy);}
 .stage-num{
   display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;
-  background:var(--gold);color:var(--navy);font-weight:800;font-size:14px;margin-bottom:10px;
+  background:var(--gold);color:var(--ink);font-weight:800;font-size:14px;margin-bottom:10px;
 }
 .stage-card h4{font-size:15px;margin:0 0 6px;}
 .stage-card p{font-size:12.5px;color:var(--text-soft);line-height:1.5;margin:0;font-weight:500;}
 
 .field-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 22px;}
-.field-card{display:flex;gap:10px;background:#fff;border:1px solid var(--navy-line);border-radius:12px;padding:12px 14px;}
+.field-card{display:flex;gap:10px;background:var(--surface);border:1px solid var(--navy-line);border-radius:12px;padding:12px 14px;}
 .field-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0;}
-.field-card strong{display:block;font-size:13.5px;color:var(--navy);}
+.field-card strong{display:block;font-size:13.5px;color:var(--ink);}
 .field-card span{font-size:12px;color:var(--text-soft);line-height:1.45;font-weight:500;}
 
 .rt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0 24px;}
-.rt-card{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--navy-line);border-radius:12px;padding:12px 14px;}
-.rt-card strong{display:block;font-size:14px;color:var(--navy);}
+.rt-card{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--navy-line);border-radius:12px;padding:12px 14px;}
+.rt-card strong{display:block;font-size:14px;color:var(--ink);}
 .rt-card span{font-size:12.5px;color:var(--text-soft);font-weight:500;line-height:1.5;}
 
 .chip-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:12px 0 16px;}
 .chip-flow .st{background:var(--navy);color:#fff;font-weight:800;font-size:12.5px;padding:7px 14px;border-radius:20px;}
-.chip-flow .st.end{background:var(--gold);color:var(--navy);}
+.chip-flow .st.end{background:var(--gold);color:var(--ink);}
 .chip-flow .ico{color:var(--gold-2);width:16px;height:16px;}
 
 .src-chips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 4px;}
@@ -499,27 +503,27 @@ table.board td.stage-name{font-weight:800;color:var(--navy);}
   gap:16px;align-items:center;position:relative;overflow:hidden;
 }
 .divider-band::after{content:"";position:absolute;right:-40px;top:-50px;width:160px;height:160px;border-radius:50%;border:20px solid rgba(227,178,60,.16);}
-.divider-band .ico-tile{background:var(--gold);color:var(--navy);width:46px;height:46px;border-radius:13px;}
+.divider-band .ico-tile{background:var(--gold);color:var(--ink);width:46px;height:46px;border-radius:13px;}
 .divider-band .db-eyebrow{font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);}
 .divider-band h2{font-size:23px;font-weight:800;margin-top:2px;color:#fff;}
 .divider-band p{margin:4px 0 0;font-size:13.5px;color:var(--on-navy);font-weight:500;}
 .divider-band > div{position:relative;z-index:1;}
 
 /* ---------- FAQ ---------- */
-.faq-item{display:flex;gap:14px;background:#fff;border:1px solid var(--navy-line);border-radius:14px;padding:16px 18px;margin-bottom:12px;box-shadow:var(--shadow);}
+.faq-item{display:flex;gap:14px;background:var(--surface);border:1px solid var(--navy-line);border-radius:14px;padding:16px 18px;margin-bottom:12px;box-shadow:var(--shadow);}
 .faq-item .ico-tile{width:34px;height:34px;border-radius:10px;}
 .faq-item .ico-tile .ico{width:19px;height:19px;}
-.faq-q{font-weight:800;font-size:15px;margin-bottom:6px;color:var(--navy);line-height:1.45;}
+.faq-q{font-weight:800;font-size:15px;margin-bottom:6px;color:var(--ink);line-height:1.45;}
 .faq-a{font-size:13.5px;color:var(--text-soft);font-weight:500;line-height:1.65;}
 
 /* ---------- Prev / next ---------- */
 .pagenav{display:flex;justify-content:space-between;gap:12px;margin-top:52px;padding-top:22px;border-top:2px solid var(--navy-line);}
 .pagenav a{
-  display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:13px;color:var(--navy);text-decoration:none;
+  display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:13px;color:var(--ink);text-decoration:none;
   border:1.5px solid var(--navy-line);border-radius:12px;padding:11px 16px;cursor:pointer;transition:all .15s;
 }
 .pagenav a:hover{border-color:var(--gold);}
-.pagenav a.next{background:var(--navy);border-color:var(--navy);color:#fff;}
+.pagenav a.next{background:var(--navy);border-color:var(--ink);color:#fff;}
 .pagenav a.next .ico{color:var(--gold);}
 .pagenav a.next:hover{background:var(--navy-2);}
 .pagenav .ico{width:17px;height:17px;}
@@ -529,10 +533,10 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
 /* ---------- Màn hình mật khẩu ---------- */
 .pw-gate{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;background:var(--navy);padding:24px;}
 .pw-gate::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:44px solid rgba(227,178,60,.14);}
-.pw-card{position:relative;width:100%;max-width:380px;background:#fff;border-radius:20px;padding:38px 32px;box-shadow:0 24px 70px rgba(0,0,0,.4);text-align:center;border-top:6px solid var(--gold);}
+.pw-card{position:relative;width:100%;max-width:380px;background:var(--surface);border-radius:20px;padding:38px 32px;box-shadow:0 24px 70px rgba(0,0,0,.4);text-align:center;border-top:6px solid var(--gold);}
 .pw-icon{display:inline-flex;margin-bottom:14px;}
 .pw-eyebrow{font-weight:800;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:6px;}
-.pw-title{font-weight:800;font-size:21px;color:var(--navy);margin-bottom:6px;}
+.pw-title{font-weight:800;font-size:21px;color:var(--ink);margin-bottom:6px;}
 .pw-desc{font-size:13px;color:var(--text-soft);margin-bottom:22px;}
 .pw-input{width:100%;padding:13px 14px;border:1.5px solid var(--navy-line);border-radius:10px;font-family:var(--font);font-size:15px;text-align:center;letter-spacing:.1em;margin-bottom:14px;outline:none;}
 .pw-input:focus{border-color:var(--gold);}
@@ -556,7 +560,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
     position:relative;z-index:30;border-bottom:3px solid var(--gold);
   }
   .mobile-topbar .hamburger{
-    background:var(--gold);border:none;color:var(--navy);width:36px;height:36px;border-radius:10px;display:flex;
+    background:var(--gold);border:none;color:var(--ink);width:36px;height:36px;border-radius:10px;display:flex;
     align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;
   }
   .mobile-topbar .hamburger .ico{width:20px;height:20px;}
@@ -589,14 +593,14 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
   table.stack,table.stack thead,table.stack tbody,table.stack tr,table.stack td{display:block;width:100%;}
   table.stack thead{display:none;}
   table.stack{border:none;background:transparent;}
-  table.stack tr{background:#fff;border:1px solid var(--navy-line);border-radius:12px;margin-bottom:10px;padding:10px 14px;}
+  table.stack tr{background:var(--surface);border:1px solid var(--navy-line);border-radius:12px;margin-bottom:10px;padding:10px 14px;}
   table.stack td{border:none !important;padding:5px 0 !important;background:transparent !important;white-space:normal !important;}
   table.stack td::before{
     content:attr(data-label);display:block;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
     color:var(--gold-deep);margin-bottom:2px;
   }
   table.stack td.code::before{display:none;}
-  .board-wrap table.stack{background:#fff;padding:10px;}
+  .board-wrap table.stack{background:var(--surface);padding:10px;}
   .board-wrap table.stack tr{box-shadow:none;}
   table.data td:first-child{white-space:normal;}
   .pagenav{flex-direction:column;}
@@ -629,27 +633,163 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
   content:"Xem trên CRM";display:inline-block;margin-top:10px;font-size:11px;font-weight:800;
   color:var(--gold-deep);background:var(--gold-tint);border:1px solid var(--gold-line);border-radius:20px;padding:3px 10px;
 }
-.stage-card.last.has-img::after{color:var(--navy);background:var(--gold);border-color:var(--gold);}
+.stage-card.last.has-img::after{color:var(--ink);background:var(--gold);border-color:var(--gold);}
 
 .side-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px;padding-top:12px;border-top:1px dashed var(--navy-line);}
 .side-label{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--text-soft);margin-right:4px;}
 .side-label .ico{width:14px;height:14px;color:var(--gold-deep);}
-.life-step.side{border-style:dashed;border-color:var(--navy-3);min-width:96px;padding:7px 12px;background:#fff;}
+.life-step.side{border-style:dashed;border-color:var(--navy-3);min-width:96px;padding:7px 12px;background:var(--surface);}
 
 /* ---------- Mục lục nhảy nhanh ---------- */
 .toc-inline{background:var(--navy-tint);border:1px solid var(--navy-line);border-radius:var(--radius);padding:16px 18px;margin:-8px 0 30px;}
-.toc-inline-title{display:flex;align-items:center;gap:8px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;}
+.toc-inline-title{display:flex;align-items:center;gap:8px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:10px;}
 .toc-inline-title .ico{width:15px;height:15px;color:var(--gold-deep);}
 .toc-inline-list{display:flex;flex-wrap:wrap;gap:8px;}
 .toc-inline button{
-  font-family:var(--font);font-size:12.5px;font-weight:700;color:var(--navy);background:#fff;border:1px solid var(--navy-line);
+  font-family:var(--font);font-size:12.5px;font-weight:700;color:var(--ink);background:var(--surface);border:1px solid var(--navy-line);
   border-radius:20px;padding:6px 12px;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:6px;
 }
 .toc-inline button b{font-size:10.5px;color:var(--gold-deep);}
-.toc-inline button:hover{background:var(--navy);border-color:var(--navy);color:#fff;}
+.toc-inline button:hover{background:var(--navy);border-color:var(--ink);color:#fff;}
 .toc-inline button:hover b{color:var(--gold);}
 .view h3,.view h2{scroll-margin-top:16px;}
 .divider-band{scroll-margin-top:16px;}
+
+/* ---------- Giao diện tối ---------- */
+:root[data-theme="dark"]{
+  --white:#0A1530;--surface:#0F2046;--ink:#F1F5FD;--sidebar:#0C1A3C;
+  --navy:#1A3470;--navy-2:#24448F;--navy-3:#9DB8F2;--navy-tint:#162B58;--navy-line:#27427A;
+  --gold-tint:#2B2610;--gold-line:#5A4A18;--gold-deep:#E8C063;
+  --text:#E8EEFA;--text-soft:#AAB9D8;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+}
+:root[data-theme="dark"] .figure img{background:#fff;}
+/* Phần tử nền vàng: chữ luôn màu navy đậm */
+.card.gold,.home-card.info,.tag.gold,.badge.convert,.life-step.end,.step-num,.stage-num,.navlist a.active,
+.actions-row .act.gold,.chip-flow .st.end,.banner .ico-tile,.ico-tile.gold,.brand-mark,.link-card .ico-tile,
+.scn-head .ico-tile,.divider-band .ico-tile,.pw-btn.gold,.stage-card.last.has-img::after{--ink:#10214A;}
+
+/* ---------- Thanh tiến độ đọc ---------- */
+.read-bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:300;transition:width .1s linear;}
+
+/* ---------- Tìm kiếm + đổi giao diện (thanh bên) ---------- */
+.side-tools{display:flex;gap:8px;padding:0 14px 14px;}
+.search-box{flex:1;position:relative;min-width:0;}
+.search-box .ico{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--on-navy-soft);pointer-events:none;}
+.search-box input{
+  width:100%;font-family:var(--font);font-size:13px;font-weight:600;color:#fff;background:#1D3670;border:1px solid #2C4A8C;
+  border-radius:10px;padding:9px 12px 9px 34px;outline:none;
+}
+.search-box input::placeholder{color:var(--on-navy-soft);}
+.search-box input:focus{border-color:var(--gold);}
+.theme-btn{
+  width:38px;height:38px;flex-shrink:0;border-radius:10px;border:1px solid #2C4A8C;background:#1D3670;color:var(--gold);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+}
+.theme-btn:hover{border-color:var(--gold);}
+.theme-btn .ico{width:18px;height:18px;}
+.theme-btn .i-sun{display:none;}
+:root[data-theme="dark"] .theme-btn .i-sun{display:block;}
+:root[data-theme="dark"] .theme-btn .i-moon{display:none;}
+.search-results{list-style:none;padding:0 14px;display:none;}
+.search-results.show{display:block;}
+.search-results li{margin-bottom:6px;}
+.search-results button{
+  width:100%;text-align:left;font-family:var(--font);background:#1D3670;border:1px solid transparent;border-radius:10px;
+  padding:9px 12px;color:var(--on-navy);cursor:pointer;
+}
+.search-results button:hover{border-color:var(--gold);}
+.search-results .sr-where{display:block;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);}
+.search-results .sr-title{display:block;font-size:13px;font-weight:800;color:#fff;margin-top:2px;line-height:1.35;}
+.search-results .sr-snip{display:block;font-size:12px;font-weight:500;color:var(--on-navy-soft);margin-top:3px;line-height:1.45;}
+.search-results .sr-none{font-size:13px;color:var(--on-navy-soft);padding:6px 4px;}
+.search-results mark{background:rgba(227,178,60,.35);color:#fff;border-radius:3px;padding:0 1px;}
+.navlist.hide{display:none;}
+
+/* ---------- Đã đọc ---------- */
+.navlist a.done .n{display:none;}
+.navlist a.done::after{
+  content:"";width:18px;height:18px;border-radius:50%;flex-shrink:0;background:var(--gold) no-repeat center/11px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310214A' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+}
+.navlist a.active.done::after{background-color:var(--navy);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E3B23C' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");}
+
+/* ---------- Tiến độ trên trang chủ ---------- */
+.hero-progress{margin-top:26px;max-width:520px;}
+.hp-top{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;font-weight:700;color:var(--on-navy);margin-bottom:8px;}
+.hp-top b{color:var(--gold);}
+.hp-bar{height:8px;border-radius:8px;background:rgba(255,255,255,.14);overflow:hidden;}
+.hp-bar i{display:block;height:100%;width:0;background:var(--gold);border-radius:8px;transition:width .4s;}
+.hero-cta{
+  display:none;margin-top:18px;align-items:center;gap:8px;font-family:var(--font);font-weight:800;font-size:13.5px;
+  background:var(--gold);color:#10214A;border:none;border-radius:12px;padding:11px 18px;cursor:pointer;
+}
+.hero-cta.show{display:inline-flex;}
+.hero-cta .ico{width:17px;height:17px;}
+
+/* ---------- Lộ trình trang chủ ---------- */
+.roadmap{position:relative;margin:6px 0 34px;}
+.road-item{display:flex;gap:16px;position:relative;padding-bottom:14px;cursor:pointer;text-decoration:none;color:inherit;}
+.road-item:last-child{padding-bottom:0;}
+.road-item::before{content:"";position:absolute;left:21px;top:46px;bottom:-4px;width:2px;background:var(--gold-line);}
+.road-item:last-child::before{display:none;}
+.road-dot{
+  flex-shrink:0;width:44px;height:44px;border-radius:50%;background:var(--gold);color:#10214A;font-weight:800;font-size:14px;
+  display:flex;align-items:center;justify-content:center;z-index:1;box-shadow:0 0 0 5px var(--white);
+}
+.road-item.done .road-dot{background:var(--navy);color:var(--gold);}
+.road-card{
+  flex:1;min-width:0;display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--navy-line);
+  border-radius:var(--radius);padding:14px 18px;box-shadow:var(--shadow);transition:border-color .15s,transform .15s;
+}
+.road-item:hover .road-card{border-color:var(--gold);transform:translateX(3px);}
+.road-card h4{margin:0 0 2px;font-size:15.5px;color:var(--ink);}
+.road-card p{margin:0;font-size:12.5px;color:var(--text-soft);font-weight:500;line-height:1.5;}
+.road-body{flex:1;min-width:0;}
+.road-status{flex-shrink:0;font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px;background:var(--navy-tint);color:var(--text-soft);white-space:nowrap;}
+.road-item.done .road-status{background:var(--gold);color:#10214A;}
+
+/* ---------- Mục lục nổi ---------- */
+.toc-inline button.on{background:var(--navy);border-color:var(--navy);color:#fff;}
+.toc-inline button.on b{color:var(--gold);}
+.toc-fab{
+  position:fixed;right:22px;bottom:22px;z-index:120;display:none;align-items:center;gap:8px;font-family:var(--font);font-weight:800;
+  font-size:13px;background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:11px 16px;cursor:pointer;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+}
+.toc-fab.show{display:inline-flex;}
+.toc-fab .ico{width:17px;height:17px;color:var(--gold);}
+.toc-panel{
+  position:fixed;right:22px;bottom:78px;z-index:120;width:min(340px,calc(100vw - 32px));max-height:60vh;overflow-y:auto;display:none;
+  background:var(--surface);border:1px solid var(--navy-line);border-radius:16px;padding:10px;box-shadow:0 16px 40px rgba(0,0,0,.3);
+}
+.toc-panel.show{display:block;}
+.toc-panel button{
+  display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;font-family:var(--font);font-size:13px;font-weight:700;
+  color:var(--ink);background:transparent;border:none;border-radius:10px;padding:9px 10px;cursor:pointer;line-height:1.4;
+}
+.toc-panel button b{font-size:11px;color:var(--gold-deep);padding-top:2px;}
+.toc-panel button:hover{background:var(--navy-tint);}
+.toc-panel button.on{background:var(--gold-tint);}
+
+/* ---------- Hiệu ứng hiện dần khi cuộn ---------- */
+.js-reveal .rv{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;}
+.js-reveal .rv.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.js-reveal .rv{opacity:1;transform:none;transition:none;}.read-bar{transition:none;}}
+
+@media(max-width:860px){
+  .toc-fab{right:14px;bottom:14px;}
+  .toc-panel{right:14px;bottom:68px;}
+  .road-card{flex-wrap:wrap;}
+  .road-status{order:-1;}
+  .road-dot{width:38px;height:38px;}
+  .road-item::before{left:18px;top:40px;}
+  .hero-progress{max-width:none;}
+}
+
+.flash{animation:flash 1.8s ease;}
+@keyframes flash{0%,60%{box-shadow:0 0 0 3px var(--gold);}100%{box-shadow:none;}}
 
 </style>
 </head>
@@ -668,6 +808,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
 </div>
 
 <div class="app" id="appRoot" style="display:none;">
+  <div class="read-bar" id="readBar"></div>
   <div class="mobile-topbar">
     <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Mở menu"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
     <span class="current-title" id="mobileCurrentTitle">Trang chủ</span>
@@ -680,6 +821,11 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
       <div class="brand-title">CRM Tuyển Sinh<br>Training Onboarding</div>
       <div class="brand-sub">Dành cho Tư vấn TS &amp; Admin TS mới</div>
     </div>
+    <div class="side-tools">
+      <div class="search-box"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="searchInput" placeholder="Tìm trong tài liệu..." autocomplete="off" aria-label="Tìm kiếm"></div>
+      <button type="button" class="theme-btn" id="themeBtn" aria-label="Đổi giao diện sáng/tối"><svg class="ico i-moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
+    </div>
+    <ul class="search-results" id="searchResults"></ul>
     <ul class="navlist" id="navlist">
       <li><a data-view="home" data-title="Trang chủ" class="home-link"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg></span><span class="nv-txt">Trang chủ</span></a></li>
       <li class="nav-sep">Học theo thứ tự</li>
@@ -709,6 +855,11 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
           <span class="tag">Admin TS</span>
           <span class="tag">Salesforce CRM</span>
         </div>
+        <div class="hero-progress" id="heroProgress">
+          <div class="hp-top"><span>Tiến độ học</span><span><b id="hpCount">0/6</b> phần</span></div>
+          <div class="hp-bar"><i id="hpFill"></i></div>
+        </div>
+        <button type="button" class="hero-cta" id="heroCta"><span id="heroCtaText">Tiếp tục học</span><svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
       </div>
 
       <div class="home-cols">
@@ -747,18 +898,21 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
         </div>
       </div>
 
-      <div class="section-toc-title"><svg class="ico" aria-hidden="true"><use href="#i-list"/></svg> Nội dung tài liệu</div>
-      <p class="toc-hint">Nên đọc lần lượt từ Phần 01 đến Phần 06. Phần 07 đến 09 dùng để tra cứu khi cần.</p>
+      <div class="section-toc-title"><svg class="ico" aria-hidden="true"><use href="#i-list"/></svg> Lộ trình học</div>
+      <p class="toc-hint">Nên học lần lượt từ Phần 01 đến Phần 06. Phần 07 đến 09 dùng để tra cứu khi cần.</p>
+      <div class="roadmap">
+        <a class="road-item" data-view="p1"><div class="road-dot">01</div><div class="road-card"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></span><div class="road-body"><h4>Tổng quan CRM</h4><p>3 nhóm khách hàng, thuật ngữ cơ bản và hành trình từ Lead đến Opportunity.</p></div><span class="road-status">Chưa học</span></div></a>
+        <a class="road-item" data-view="p2"><div class="road-dot">02</div><div class="road-card"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span><div class="road-body"><h4>Chăm sóc khách hàng mới <span class="tag soft">Lead</span></h4><p>Lead Source, Auto Follow-up Leads, 15 Task Result và xử lý Lead trùng.</p></div><span class="road-status">Chưa học</span></div></a>
+        <a class="road-item" data-view="p3"><div class="road-dot">03</div><div class="road-card"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></span><div class="road-body"><h4>Chăm sóc khách hàng tiềm năng <span class="tag soft">Opportunity</span></h4><p>8 giai đoạn Opportunity, Auto Follow-up và Payment.</p></div><span class="road-status">Chưa học</span></div></a>
+        <a class="road-item" data-view="p4"><div class="road-dot">04</div><div class="road-card"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-school"/></svg></span><div class="road-body"><h4>Chăm sóc PHHS đang theo học <span class="tag soft">Current</span></h4><p>Tiếp nhận và xử lý Case của phụ huynh có con đang học.</p></div><span class="road-status">Chưa học</span></div></a>
+        <a class="road-item" data-view="p5"><div class="road-dot">05</div><div class="road-card"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg></span><div class="road-body"><h4>Thao tác hằng ngày</h4><p>Lịch làm việc chuẩn từ đầu giờ đến cuối ngày.</p></div><span class="road-status">Chưa học</span></div></a>
+        <a class="road-item" data-view="p6"><div class="road-dot">06</div><div class="road-card"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></span><div class="road-body"><h4>Báo cáo (Report) cơ bản</h4><p>4 nhóm báo cáo và các bước tạo báo cáo.</p></div><span class="road-status">Chưa học</span></div></a>
+      </div>
+      <div class="section-toc-title"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg> Tra cứu khi cần</div>
       <div class="toc-grid">
-        <a class="toc-card" data-view="p1"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></span><span class="tc-num">01</span></div><div><h4>Tổng quan CRM</h4><p>3 nhóm khách hàng, thuật ngữ cơ bản và hành trình từ Lead đến Opportunity.</p></div></a>
-        <a class="toc-card" data-view="p2"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="tc-num">02</span></div><div><h4>Chăm sóc khách hàng mới <span class="tag soft">Lead</span></h4><p>Lead Source, Auto Follow-up Leads, 15 Task Result và xử lý Lead trùng.</p></div></a>
-        <a class="toc-card" data-view="p3"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></span><span class="tc-num">03</span></div><div><h4>Chăm sóc khách hàng tiềm năng <span class="tag soft">Opportunity</span></h4><p>8 giai đoạn Opportunity, Auto Follow-up và Payment.</p></div></a>
-        <a class="toc-card" data-view="p4"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-school"/></svg></span><span class="tc-num">04</span></div><div><h4>Chăm sóc PHHS đang theo học <span class="tag soft">Current</span></h4><p>Tiếp nhận và xử lý Case của phụ huynh có con đang học.</p></div></a>
-        <a class="toc-card" data-view="p5"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg></span><span class="tc-num">05</span></div><div><h4>Thao tác hằng ngày</h4><p>Lịch làm việc chuẩn từ đầu giờ đến cuối ngày.</p></div></a>
-        <a class="toc-card" data-view="p6"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></span><span class="tc-num">06</span></div><div><h4>Báo cáo (Report) cơ bản</h4><p>4 nhóm báo cáo và các bước tạo báo cáo.</p></div></a>
-        <a class="toc-card" data-view="p7"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg></span><span class="tc-num">07</span></div><div><h4>Lỗi thường gặp <span class="tag soft">Tra cứu</span></h4><p>5 lỗi phổ biến và cách làm đúng.</p></div></a>
-        <a class="toc-card" data-view="p8"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg></span><span class="tc-num">08</span></div><div><h4>Hỏi nhanh đáp gọn <span class="tag soft">Tra cứu</span></h4><p>Những câu hỏi nhân viên mới hay gặp nhất.</p></div></a>
-        <a class="toc-card" data-view="p9"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><span class="tc-num">09</span></div><div><h4>Thuật ngữ cần biết <span class="tag soft">Tra cứu</span></h4><p>Giải thích ngắn các từ hay gặp trên CRM.</p></div></a>
+        <a class="toc-card" data-view="p7"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg></span><span class="tc-num">07</span></div><div><h4>Lỗi thường gặp</h4><p>5 lỗi phổ biến và cách làm đúng.</p></div></a>
+        <a class="toc-card" data-view="p8"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg></span><span class="tc-num">08</span></div><div><h4>Hỏi nhanh đáp gọn</h4><p>Những câu hỏi nhân viên mới hay gặp nhất.</p></div></a>
+        <a class="toc-card" data-view="p9"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><span class="tc-num">09</span></div><div><h4>Thuật ngữ cần biết</h4><p>Giải thích ngắn các từ hay gặp trên CRM.</p></div></a>
       </div>
     </div>
 
@@ -1747,27 +1901,241 @@ document.querySelectorAll('.stage-card.has-img').forEach(card => {
   });
 });
 
-// ---- Mục lục nhảy nhanh (tự tạo từ các tiêu đề trong trang) ----
-document.querySelectorAll('.view[data-toc]').forEach(view => {
-  var banner = view.querySelector('.banner');
-  var items = view.querySelectorAll('h3, .divider-band');
-  if (!banner || items.length < 3) return;
-  var box = document.createElement('div');
-  box.className = 'toc-inline';
-  box.innerHTML = '<div class="toc-inline-title"><svg class="ico" aria-hidden="true"><use href="#i-list"/></svg>Trong trang này</div><div class="toc-inline-list"></div>';
-  var list = box.querySelector('.toc-inline-list');
-  items.forEach((el, i) => {
-    var h = el.matches('.divider-band') ? el.querySelector('h2') : el;
-    var label = h.textContent.replace(/\s+/g, ' ').trim();
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.innerHTML = '<b>' + String(i + 1).padStart(2, '0') + '</b>';
-    btn.appendChild(document.createTextNode(label));
-    btn.addEventListener('click', () => el.scrollIntoView({behavior: 'smooth', block: 'start'}));
-    list.appendChild(btn);
+
+// =====================================================================
+// Tiện ích: lưu trạng thái, giao diện sáng/tối, tiến độ, tìm kiếm, mục lục
+// =====================================================================
+var LS = {
+  get: function(k){ try { return localStorage.getItem(k); } catch(e){ return null; } },
+  set: function(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+};
+var isMobile = function(){ return window.matchMedia('(max-width:860px)').matches; };
+var mainScroller = document.querySelector('.main');
+var currentView = 'home';
+var STUDY = ['p1','p2','p3','p4','p5','p6'];
+var ALLP = STUDY.concat(['p7','p8','p9']);
+
+function scrollInfo(){
+  if (isMobile() && mainScroller) return {top: mainScroller.scrollTop, max: mainScroller.scrollHeight - mainScroller.clientHeight};
+  var de = document.documentElement;
+  return {top: window.scrollY, max: de.scrollHeight - window.innerHeight};
+}
+function viewTitle(id){
+  var a = document.querySelector('.navlist a[data-view="' + id + '"]');
+  return a ? (a.dataset.title || a.textContent.trim()) : id;
+}
+
+// ---- Giao diện sáng / tối ----
+(function(){
+  var btn = document.getElementById('themeBtn');
+  if (!btn) return;
+  btn.addEventListener('click', function(){
+    var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+    var next = dark ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    LS.set('crm_theme_v1', next);
   });
-  banner.insertAdjacentElement('afterend', box);
-});
+})();
+
+// ---- Tiến độ học + "Đã đọc" ----
+var readSet = {};
+try { (JSON.parse(LS.get('crm_read_v1') || '[]')).forEach(function(k){ readSet[k] = true; }); } catch(e){}
+function saveRead(){ LS.set('crm_read_v1', JSON.stringify(Object.keys(readSet))); }
+
+function refreshProgress(){
+  document.querySelectorAll('.navlist a[data-view]').forEach(function(a){
+    a.classList.toggle('done', !!readSet[a.dataset.view]);
+  });
+  var last = LS.get('crm_last_view_v1');
+  var done = STUDY.filter(function(k){ return readSet[k]; }).length;
+  var cnt = document.getElementById('hpCount'), fill = document.getElementById('hpFill');
+  if (cnt) cnt.textContent = done + '/' + STUDY.length;
+  if (fill) fill.style.width = (done / STUDY.length * 100) + '%';
+  document.querySelectorAll('.road-item').forEach(function(it){
+    var id = it.dataset.view, st = it.querySelector('.road-status');
+    var isDone = !!readSet[id];
+    it.classList.toggle('done', isDone);
+    if (st) st.textContent = isDone ? 'Đã học' : (last === id ? 'Đang học' : 'Chưa học');
+  });
+  var cta = document.getElementById('heroCta'), txt = document.getElementById('heroCtaText');
+  if (cta && txt) {
+    var next = STUDY.filter(function(k){ return !readSet[k]; })[0];
+    if (next) {
+      var started = done > 0 || last;
+      txt.textContent = (started ? 'Tiếp tục: ' : 'Bắt đầu: ') + viewTitle(next);
+      cta.dataset.go = next;
+      cta.classList.add('show');
+    } else { cta.classList.remove('show'); }
+  }
+}
+(function(){
+  var cta = document.getElementById('heroCta');
+  if (cta) cta.addEventListener('click', function(){ showView(cta.dataset.go || 'p1'); });
+})();
+
+// ---- Mục lục nhảy nhanh + mục lục nổi ----
+var tocData = {};
+var fab = null, panel = null;
+(function buildToc(){
+  fab = document.createElement('button');
+  fab.type = 'button'; fab.className = 'toc-fab';
+  fab.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-list"/></svg>Mục lục';
+  panel = document.createElement('div'); panel.className = 'toc-panel';
+  document.body.appendChild(fab); document.body.appendChild(panel);
+  fab.addEventListener('click', function(e){ e.stopPropagation(); panel.classList.toggle('show'); });
+  document.addEventListener('click', function(e){ if (!panel.contains(e.target)) panel.classList.remove('show'); });
+
+  document.querySelectorAll('.view[data-toc]').forEach(function(view){
+    var banner = view.querySelector('.banner');
+    var items = view.querySelectorAll('h3, .divider-band');
+    if (!banner || items.length < 3) return;
+    var box = document.createElement('div');
+    box.className = 'toc-inline';
+    box.innerHTML = '<div class="toc-inline-title"><svg class="ico" aria-hidden="true"><use href="#i-list"/></svg>Trong trang này</div><div class="toc-inline-list"></div>';
+    var list = box.querySelector('.toc-inline-list');
+    var group = document.createElement('div'); group.dataset.v = view.id; group.style.display = 'none';
+    var d = {els: [], inline: [], pan: [], group: group};
+    items.forEach(function(el, i){
+      var h = el.matches('.divider-band') ? el.querySelector('h2') : el;
+      var label = h.textContent.replace(/\s+/g, ' ').trim();
+      var num = String(i + 1).padStart(2, '0');
+      function mk(){
+        var b = document.createElement('button'); b.type = 'button';
+        b.innerHTML = '<b>' + num + '</b>'; b.appendChild(document.createTextNode(label));
+        b.addEventListener('click', function(){ el.scrollIntoView({behavior: 'smooth', block: 'start'}); panel.classList.remove('show'); });
+        return b;
+      }
+      var b1 = mk(), b2 = mk();
+      list.appendChild(b1); group.appendChild(b2);
+      d.els.push(el); d.inline.push(b1); d.pan.push(b2);
+    });
+    panel.appendChild(group);
+    banner.insertAdjacentElement('afterend', box);
+    tocData[view.id.replace('view-','')] = d;
+  });
+})();
+
+function updateScrollUI(){
+  var s = scrollInfo();
+  var ratio = s.max <= 40 ? 1 : Math.min(1, Math.max(0, s.top / s.max));
+  var bar = document.getElementById('readBar');
+  if (bar) bar.style.width = (currentView === 'home' ? 0 : ratio * 100) + '%';
+  if (currentView !== 'home' && ratio >= 0.85 && !readSet[currentView]) {
+    readSet[currentView] = true; saveRead(); refreshProgress();
+  }
+  var d = tocData[currentView];
+  if (d) {
+    var active = 0;
+    d.els.forEach(function(el, i){ if (el.getBoundingClientRect().top <= 150) active = i; });
+    d.inline.forEach(function(b, i){ b.classList.toggle('on', i === active && s.top > 200); });
+    d.pan.forEach(function(b, i){ b.classList.toggle('on', i === active); });
+    fab.classList.toggle('show', s.top > 360);
+  } else { fab.classList.remove('show'); panel.classList.remove('show'); }
+}
+window.addEventListener('scroll', updateScrollUI, {passive: true});
+if (mainScroller) mainScroller.addEventListener('scroll', updateScrollUI, {passive: true});
+window.addEventListener('resize', updateScrollUI);
+
+// Bọc showView để cập nhật trạng thái mỗi lần đổi mục
+var _showViewBase = showView;
+showView = function(id){
+  _showViewBase(id);
+  currentView = id;
+  if (id !== 'home') LS.set('crm_last_view_v1', id);
+  Object.keys(tocData).forEach(function(k){ tocData[k].group.style.display = (k === id) ? 'block' : 'none'; });
+  panel.classList.remove('show');
+  refreshProgress();
+  setTimeout(updateScrollUI, 60);
+};
+
+// ---- Tìm kiếm ----
+(function(){
+  var input = document.getElementById('searchInput');
+  var box = document.getElementById('searchResults');
+  var navl = document.getElementById('navlist');
+  if (!input || !box) return;
+  function norm(s){ return s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'd').toLowerCase(); }
+  function clean(s){ return s.replace(/\s+/g, ' ').trim(); }
+  var index = null;
+  function build(){
+    index = [];
+    document.querySelectorAll('.view').forEach(function(view){
+      var vid = view.id.replace('view-', '');
+      if (vid === 'home') return;
+      var marks = Array.prototype.slice.call(view.querySelectorAll('.banner, h3, .divider-band'));
+      marks.forEach(function(m, i){
+        var head = m.matches('.banner, .divider-band') ? (m.querySelector('h2') || m) : m;
+        var text = clean(m.textContent), n = m.nextElementSibling;
+        while (n && marks.indexOf(n) < 0 && !n.classList.contains('pagenav') && n.tagName !== 'FOOTER') { text += ' ' + clean(n.textContent); n = n.nextElementSibling; }
+        index.push({view: vid, el: m, head: clean(head.textContent), text: text});
+      });
+      view.querySelectorAll('.term-cell').forEach(function(c){
+        index.push({view: vid, el: c, head: clean(c.querySelector('.abbr').textContent), text: clean(c.textContent)});
+      });
+      view.querySelectorAll('.faq-item').forEach(function(c){
+        index.push({view: vid, el: c, head: clean(c.querySelector('.faq-q').textContent), text: clean(c.textContent)});
+      });
+    });
+    index.forEach(function(e){ e.nh = norm(e.head); e.nt = norm(e.text); });
+  }
+  function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function run(){
+    var q = norm(clean(input.value));
+    if (q.length < 2) { box.classList.remove('show'); box.innerHTML = ''; if (navl) navl.classList.remove('hide'); return; }
+    if (!index) build();
+    var toks = q.split(' ').filter(Boolean), res = [];
+    index.forEach(function(e){
+      var score = 0, ok = true;
+      toks.forEach(function(t){
+        var inH = e.nh.indexOf(t) >= 0, inT = e.nt.indexOf(t) >= 0;
+        if (!inH && !inT) ok = false;
+        score += (inH ? 3 : 0) + (inT ? 1 : 0);
+      });
+      if (ok) res.push({e: e, score: score});
+    });
+    res.sort(function(a, b){ return b.score - a.score; });
+    res = res.slice(0, 10);
+    if (navl) navl.classList.add('hide');
+    box.classList.add('show');
+    if (!res.length) { box.innerHTML = '<li class="sr-none">Không tìm thấy kết quả.</li>'; return; }
+    box.innerHTML = '';
+    res.forEach(function(r){
+      var e = r.e, k = e.nt.indexOf(toks[0]);
+      var st = Math.max(0, k - 30), snip = (st > 0 ? '…' : '') + e.text.substr(st, 100) + (e.text.length > st + 100 ? '…' : '');
+      var li = document.createElement('li'), b = document.createElement('button');
+      b.type = 'button';
+      b.innerHTML = '<span class="sr-where">' + esc(viewTitle(e.view)) + '</span><span class="sr-title">' + esc(e.head) + '</span><span class="sr-snip">' + esc(snip) + '</span>';
+      b.addEventListener('click', function(){
+        showView(e.view);
+        input.value = ''; run();
+        setTimeout(function(){
+          e.el.scrollIntoView({behavior: 'smooth', block: 'start'});
+          e.el.classList.add('flash'); setTimeout(function(){ e.el.classList.remove('flash'); }, 1800);
+        }, 120);
+      });
+      li.appendChild(b); box.appendChild(li);
+    });
+  }
+  input.addEventListener('input', run);
+  input.addEventListener('keydown', function(ev){
+    if (ev.key === 'Enter') { var f = box.querySelector('button'); if (f) f.click(); }
+    if (ev.key === 'Escape') { input.value = ''; run(); }
+  });
+})();
+
+// ---- Hiệu ứng hiện dần khi cuộn ----
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  document.documentElement.classList.add('js-reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {rootMargin: '0px 0px -40px 0px', threshold: 0.05});
+  document.querySelectorAll('.card, .scn, .step, .stage-card, .field-card, .rt-card, .term-cell, .faq-item, .road-item, .toc-card, .home-card, .flow-step, .board-wrap, .figure, .link-card, table.data')
+    .forEach(function(el){ el.classList.add('rv'); io.observe(el); });
+})();
+
+refreshProgress();
 
 </script>
 </body>
