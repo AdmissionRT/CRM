@@ -84,8 +84,6 @@ body{font-family:var(--font);background:var(--white);color:var(--text);line-heig
 .ico-tile .ico{width:22px;height:22px;}
 .ico-tile.gold{background:var(--gold);color:var(--navy);}
 .ico-tile.soft{background:var(--gold-tint);color:var(--gold-deep);}
-.ico-tile.sm{width:32px;height:32px;border-radius:10px;}
-.ico-tile.sm .ico{width:18px;height:18px;}
 
 /* ---------- Layout ---------- */
 .app{display:flex;min-height:100vh;}
@@ -172,22 +170,6 @@ ul{padding-left:20px;margin-bottom:14px;}
 li{margin-bottom:6px;font-size:14.5px;}
 strong{font-weight:800;color:var(--navy);}
 
-/* ---------- Glance (ghi nhớ nhanh) ---------- */
-.glance{
-  background:var(--gold-tint);border:1px solid var(--gold-line);border-radius:var(--radius);
-  padding:18px 20px 20px;margin:0 0 8px;
-}
-.glance-title{
-  display:flex;align-items:center;gap:8px;font-weight:800;font-size:12px;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--gold-deep);margin-bottom:12px;
-}
-.glance-title .ico{width:16px;height:16px;}
-.glance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
-.glance-item{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;font-weight:600;color:var(--navy);line-height:1.5;}
-.glance-item .ico-tile{width:30px;height:30px;border-radius:9px;}
-.glance-item .ico-tile .ico{width:16px;height:16px;}
-.glance-item span{display:block;color:var(--text-soft);font-weight:500;font-size:12.5px;margin-top:2px;}
-
 /* ---------- Cards ---------- */
 .cards{display:grid;gap:14px;margin:18px 0 24px;}
 .cards.c2{grid-template-columns:repeat(2,1fr);}
@@ -226,15 +208,6 @@ strong{font-weight:800;color:var(--navy);}
 .card.gold .meta-line .ico{color:var(--navy);}
 a.card{text-decoration:none;color:inherit;cursor:pointer;transition:transform .15s,border-color .15s,box-shadow .15s;}
 a.card:hover{transform:translateY(-2px);border-color:var(--gold);}
-
-/* ---------- Stats ---------- */
-.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 30px;}
-.stat-box{border-radius:var(--radius);padding:20px 18px;background:var(--navy);color:#fff;}
-.stat-box.gold{background:var(--gold);color:var(--navy);}
-.stat-num{font-size:34px;font-weight:800;color:var(--gold);line-height:1.1;}
-.stat-box.gold .stat-num{color:var(--navy);}
-.stat-label{font-size:12.5px;font-weight:600;color:var(--on-navy);margin-top:6px;line-height:1.4;}
-.stat-box.gold .stat-label{color:#3a2c07;}
 
 /* ---------- Hero (trang chủ) ---------- */
 .hero{
@@ -315,9 +288,6 @@ a.card:hover{transform:translateY(-2px);border-color:var(--gold);}
 }
 .term-cell .abbr{font-weight:800;color:var(--navy);font-size:14px;}
 .term-cell .desc{font-size:13px;color:var(--text-soft);margin-top:2px;font-weight:500;line-height:1.5;}
-.abbr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0 24px;}
-.abbr-item{background:var(--navy-tint);border-radius:10px;padding:10px 14px;font-size:13px;font-weight:500;color:var(--text-soft);}
-.abbr-item b{display:block;font-weight:800;color:var(--navy);font-size:14px;}
 
 /* ---------- Journey / lifecycle ---------- */
 .journey{background:var(--navy-tint);border-radius:var(--radius);padding:20px;margin:16px 0 22px;}
@@ -509,8 +479,6 @@ table.board td.stage-name{font-weight:800;color:var(--navy);}
 .field-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0;}
 .field-card strong{display:block;font-size:13.5px;color:var(--navy);}
 .field-card span{font-size:12px;color:var(--text-soft);line-height:1.45;font-weight:500;}
-.field-card.later{background:var(--gold-tint);border-color:var(--gold-line);}
-.field-card.later strong::after{content:" ↓";color:var(--gold-deep);font-weight:800;}
 
 .rt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0 24px;}
 .rt-card{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--navy-line);border-radius:12px;padding:12px 14px;}
@@ -519,11 +487,10 @@ table.board td.stage-name{font-weight:800;color:var(--navy);}
 
 .chip-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:12px 0 16px;}
 .chip-flow .st{background:var(--navy);color:#fff;font-weight:800;font-size:12.5px;padding:7px 14px;border-radius:20px;}
-.chip-flow .st.opt{background:var(--gold-tint);color:var(--gold-deep);border:1px dashed var(--gold-2);}
 .chip-flow .st.end{background:var(--gold);color:var(--navy);}
 .chip-flow .ico{color:var(--gold-2);width:16px;height:16px;}
 
-.src-chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px;}
+.src-chips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 4px;}
 .src-chips .tag{font-size:12px;}
 
 /* ---------- Khối phân cách (Dành cho Admin / Drop out) ---------- */
@@ -537,25 +504,6 @@ table.board td.stage-name{font-weight:800;color:var(--navy);}
 .divider-band h2{font-size:23px;font-weight:800;margin-top:2px;color:#fff;}
 .divider-band p{margin:4px 0 0;font-size:13.5px;color:var(--on-navy);font-weight:500;}
 .divider-band > div{position:relative;z-index:1;}
-
-/* ---------- Accordion ---------- */
-.accordion-item{border:1px solid var(--navy-line);border-radius:14px;margin-bottom:12px;overflow:hidden;background:#fff;box-shadow:var(--shadow);}
-.accordion-head{
-  padding:14px 18px;cursor:pointer;display:flex;align-items:center;gap:14px;font-weight:800;font-size:14.5px;
-  color:var(--navy);user-select:none;
-}
-.accordion-head .ah-txt{flex:1;line-height:1.4;}
-.accordion-head .plus{
-  width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;
-  justify-content:center;font-weight:800;font-size:18px;line-height:1;transition:transform .2s,background .2s;
-}
-.accordion-item.open .plus{transform:rotate(45deg);background:var(--gold);color:var(--navy);}
-.accordion-item.open .accordion-head{background:var(--navy-tint);}
-.accordion-body{max-height:0;overflow:hidden;transition:max-height .3s ease;}
-.accordion-item.open .accordion-body{max-height:900px;}
-.accordion-body-inner{padding:6px 20px 18px;font-size:13.5px;color:var(--text-soft);font-weight:500;}
-.accordion-body-inner ul{padding-left:18px;margin:0;}
-.accordion-body-inner li{margin-bottom:7px;font-size:13.5px;}
 
 /* ---------- FAQ ---------- */
 .faq-item{display:flex;gap:14px;background:#fff;border:1px solid var(--navy-line);border-radius:14px;padding:16px 18px;margin-bottom:12px;box-shadow:var(--shadow);}
@@ -631,9 +579,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
   .banner h2{font-size:22px;}
   .hero{padding:32px 22px;border-radius:18px;}
   .hero h1{font-size:32px;}
-  .stat-row{grid-template-columns:1fr 1fr;}
-  .home-cols,.toc-grid,.cards.c2,.cards.c3,.cards.c4,.glance-grid,.term-grid,.rt-grid,.field-grid{grid-template-columns:1fr;}
-  .abbr-grid{grid-template-columns:1fr 1fr;}
+  .home-cols,.toc-grid,.cards.c2,.cards.c3,.cards.c4,.term-grid,.rt-grid,.field-grid{grid-template-columns:1fr;}
   .stage-grid{grid-template-columns:1fr 1fr;}
   .flow{grid-template-columns:1fr;gap:0;}
   .flow-arrow{padding:6px 0;transform:rotate(90deg);}
@@ -658,7 +604,6 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
 }
 @media(max-width:520px){
   .stage-grid{grid-template-columns:1fr;}
-  .stat-num{font-size:28px;}
 }
 
 /* ---------- Bổ sung ---------- */
@@ -667,8 +612,6 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
 .card .badge{margin-top:2px;}
 .pw-icon .ico-tile{width:56px;height:56px;border-radius:16px;}
 .pw-icon .ico-tile .ico{width:28px;height:28px;}
-.accordion-head .ico-tile{background:var(--gold-tint);color:var(--gold-deep);}
-.accordion-item.open .accordion-head .ico-tile{background:var(--gold);color:var(--navy);}
 .step-body .chips .chip{font-weight:700;}
 @media(max-width:860px){
   .lifecycle{flex-wrap:nowrap;}
@@ -692,8 +635,6 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
 .side-label{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--text-soft);margin-right:4px;}
 .side-label .ico{width:14px;height:14px;color:var(--gold-deep);}
 .life-step.side{border-style:dashed;border-color:var(--navy-3);min-width:96px;padding:7px 12px;background:#fff;}
-.src-chips{gap:7px;}
-.card.navy .src-chips,.card.gold .src-chips{margin-top:10px;}
 
 </style>
 </head>
@@ -736,6 +677,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
       <li class="nav-sep">Tra cứu khi cần</li>
       <li><a data-view="p7" data-title="07 · Lỗi thường gặp"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg></span><span class="nv-txt">Lỗi thường gặp</span><span class="n">07</span></a></li>
       <li><a data-view="p8" data-title="08 · Hỏi nhanh đáp gọn"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg></span><span class="nv-txt">Hỏi nhanh đáp gọn</span><span class="n">08</span></a></li>
+      <li><a data-view="p9" data-title="09 · Thuật ngữ"><span class="nv-ico"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><span class="nv-txt">Thuật ngữ cần biết</span><span class="n">09</span></a></li>
     </ul>
   </nav>
 
@@ -791,7 +733,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
       </div>
 
       <div class="section-toc-title"><svg class="ico" aria-hidden="true"><use href="#i-list"/></svg> Nội dung tài liệu</div>
-      <p class="toc-hint">Nên đọc lần lượt từ Phần 01 đến Phần 06. Phần 07 và 08 dùng để tra cứu khi cần.</p>
+      <p class="toc-hint">Nên đọc lần lượt từ Phần 01 đến Phần 06. Phần 07 đến 09 dùng để tra cứu khi cần.</p>
       <div class="toc-grid">
         <a class="toc-card" data-view="p1"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></span><span class="tc-num">01</span></div><div><h4>Tổng quan CRM</h4><p>3 nhóm khách hàng, thuật ngữ cơ bản và hành trình từ Lead đến Opportunity.</p></div></a>
         <a class="toc-card" data-view="p2"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="tc-num">02</span></div><div><h4>Chăm sóc khách hàng mới <span class="tag soft">Lead</span></h4><p>Lead Source, Auto Follow-up Leads, 15 Task Result và xử lý Lead trùng.</p></div></a>
@@ -801,6 +743,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
         <a class="toc-card" data-view="p6"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></span><span class="tc-num">06</span></div><div><h4>Báo cáo (Report) cơ bản</h4><p>4 nhóm báo cáo và các bước tạo báo cáo.</p></div></a>
         <a class="toc-card" data-view="p7"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg></span><span class="tc-num">07</span></div><div><h4>Lỗi thường gặp <span class="tag soft">Tra cứu</span></h4><p>5 lỗi phổ biến và cách làm đúng.</p></div></a>
         <a class="toc-card" data-view="p8"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg></span><span class="tc-num">08</span></div><div><h4>Hỏi nhanh đáp gọn <span class="tag soft">Tra cứu</span></h4><p>Những câu hỏi nhân viên mới hay gặp nhất.</p></div></a>
+        <a class="toc-card" data-view="p9"><div class="toc-top"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><span class="tc-num">09</span></div><div><h4>Thuật ngữ cần biết <span class="tag soft">Tra cứu</span></h4><p>Giải thích ngắn các từ hay gặp trên CRM.</p></div></a>
       </div>
     </div>
 
@@ -1612,6 +1555,45 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
 
       <div class="pagenav">
         <a data-view="p7"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Phần 07</a>
+        <a class="next" data-view="p9">Phần 09: Thuật ngữ <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+
+    </div>
+
+    <!-- ============ PHẦN 9 ============ -->
+    <div class="view" id="view-p9">
+      <a class="crumb" data-view="home"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Về trang chủ</a>
+      <div class="banner">
+        <span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span>
+        <div class="banner-body">
+          <div class="banner-eyebrow">Phần 09 · Tra cứu</div>
+          <h2>Thuật ngữ cần biết</h2>
+          <p>Giải thích ngắn các từ hay gặp trong tài liệu và trên CRM.</p>
+        </div>
+      </div>
+      <div class="term-grid">
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Round Robin</div><div class="desc">Cách hệ thống tự động chia Lead lần lượt cho Tư vấn TS.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Owner</div><div class="desc">Người đang phụ trách một Lead hoặc Opportunity.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Campus Group</div><div class="desc">Nhóm cơ sở mà học sinh đăng ký. Lead trùng được xử lý theo Campus Group.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Convert</div><div class="desc">Chuyển Lead thành Opportunity khi Lead đủ điều kiện.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Stage</div><div class="desc">Giai đoạn hiện tại của Lead, Opportunity hoặc Case.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Task Result</div><div class="desc">Kết quả cuộc liên hệ do Tư vấn TS chọn khi đóng Task. Quyết định Stage và Task kế tiếp.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Due Date</div><div class="desc">Hạn xử lý của một Task.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Next Contact Date</div><div class="desc">Ngày giờ phụ huynh hẹn liên hệ lại.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Record Type</div><div class="desc">Loại của Case. Chọn đúng để Case đến đúng bộ phận.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Assign</div><div class="desc">Giao Task hoặc Case cho người xử lý.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Price book</div><div class="desc">Bảng giá áp dụng cho Opportunity theo trường và khối.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Fee sheet</div><div class="desc">Bảng khai báo các khoản phí và chính sách giảm giá của Opportunity.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Deduction</div><div class="desc">Khoản điều chỉnh chênh lệch trên Payment, thường do phí ngân hàng.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Cấn trừ</div><div class="desc">Trừ qua lại giữa các khoản tiền đã thu và khoản phải thu hoặc phải hoàn.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">Promotion Milestone</div><div class="desc">Mốc thời hạn của ưu đãi đóng sớm. Hệ thống tự cập nhật.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">AR</div><div class="desc">Phòng Kế toán, phụ trách thu phí, đối soát và hoàn tiền.</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">NCC</div><div class="desc">Nhà cung cấp dịch vụ thanh toán (ví dụ BIDV, VCB).</div></div></div>
+        <div class="term-cell"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span><div><div class="abbr">PH / PHHS</div><div class="desc">Phụ huynh / phụ huynh học sinh.</div></div></div>
+      </div>
+
+      <div class="pagenav">
+        <a data-view="p8"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg> Phần 08</a>
         <a class="next" data-view="home">Về trang chủ <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       </div>
 
@@ -1727,13 +1709,6 @@ window.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('view-' + h)) initial = h;
   } catch (err) { /* bỏ qua nếu không đọc được hash */ }
   showView(initial);
-});
-
-// ---- Accordion ----
-document.querySelectorAll('.accordion-head').forEach(head => {
-  head.addEventListener('click', () => {
-    head.parentElement.classList.toggle('open');
-  });
 });
 
 // ---- Image zoom modal ----
