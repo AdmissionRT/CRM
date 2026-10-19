@@ -999,6 +999,8 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
         <div class="flow-step"><div class="fs-num">Bước 3 · Hệ thống làm</div><h4>Mở quyền Convert</h4><p>Khi đạt điều kiện cuối, hệ thống mở quyền Convert để chuyển Lead sang Opportunity.</p></div>
       </div>
 
+      <div class="note info"><svg class="ico" aria-hidden="true"><use href="#i-refresh"/></svg><div>Cách bấm nút <strong>Convert</strong> trên CRM xem trong <strong>Hướng dẫn thao tác từng bước</strong> ở cuối mục Task (link bên dưới).</div></div>
+
       <h3><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg></span> Cách đóng Task</h3>
       <p>Ví dụ: Task Result "Không thể liên lạc với phụ huynh" từ lần 1 đến lần 5. Thao tác mỗi lần đều giống nhau, chỉ khác Task Result tương ứng với lần gọi.</p>
       <div class="actions-row">
@@ -1008,7 +1010,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
       <div class="note info"><svg class="ico" aria-hidden="true"><use href="#i-edit"/></svg><div><strong>Ghi chú thêm:</strong> ngoài Task, Tư vấn TS có thể dùng trường <strong>Note</strong> để ghi nhanh thông tin bổ sung (không gắn hạn). Cách này dùng được cho cả Lead và Opportunity.</div></div>
 
       <h3><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-list"/></svg></span> Bảng 15 Task Result</h3>
-      <p class="lead-p">Đây là bảng tra cứu chính. Task Result Tư vấn TS chọn sẽ quyết định Lead Stage và Due Date của Task kế tiếp.</p>
+      <p class="lead-p">Đây là bảng tra cứu chính. Task Result Tư vấn TS chọn sẽ quyết định Lead Stage và Due Date của Task kế tiếp. Due Date (12h, 24h, 48h...) được tính từ lúc Task kế tiếp được tạo.</p>
 
       <div class="board-wrap">
         <div class="board-title">Bảng tra Task Result <span class="dim">TR1 đến TR15</span></div>
@@ -1036,7 +1038,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
         </table>
       </div>
 
-      <div class="note warn"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg><div><strong>Dễ nhầm:</strong> TR10 "Không còn nhu cầu" chuyển Lead sang Lost nhưng <strong>vẫn tạo Task tiếp theo</strong> để nuôi dưỡng lại mỗi 60 ngày. Còn TR11 đến TR14 thì <strong>dừng hẳn, không tạo thêm Task</strong>. Vì vậy, Lost chưa chắc là kết thúc chăm sóc.</div></div>
+      <div class="note warn"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg><div><strong>Dễ nhầm:</strong> TR10 "Không còn nhu cầu" chuyển Lead sang Lost nhưng <strong>vẫn tạo Task tiếp theo</strong> để nuôi dưỡng lại mỗi 60 ngày. Khi chọn TR10, Tư vấn TS cần chọn thêm <strong>Lost Reason</strong> trước khi nhấn Done. Còn TR11 đến TR14 thì <strong>dừng hẳn, không tạo thêm Task</strong>. Vì vậy, Lost chưa chắc là kết thúc chăm sóc.</div></div>
 
       <h3><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></span> 4 tình huống quan trọng cần nhớ</h3>
       <div class="cards c2">
@@ -1057,8 +1059,8 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
         <div class="scn">
           <div class="scn-head"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><h4>Spam hoặc nhấp nhầm biểu mẫu</h4><span class="badge unqualified">Unqualified</span></div>
           <div class="scn-body">
-            <div class="scn-row"><b>Cần làm</b><span>Chọn <strong>Lost Reason</strong> trước khi nhấn Done.</span></div>
-            <div class="scn-row"><b>Kết quả</b><span>Không tạo Task tiếp theo, luồng chăm sóc kết thúc hoàn toàn.</span></div>
+            <div class="scn-row"><b>Cần làm</b><span>Chọn Task Result <strong>"Chỉ nhấp nhầm biểu mẫu / Spam / Không liên quan"</strong> (TR12) rồi nhấn Done.</span></div>
+            <div class="scn-row"><b>Kết quả</b><span>Lead chuyển sang Unqualified, không tạo Task tiếp theo, luồng chăm sóc kết thúc hoàn toàn.</span></div>
           </div>
         </div>
         <div class="scn">
@@ -1161,7 +1163,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
       </div>
 
       <h3 class="first"><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-flag"/></svg></span> Vòng đời Opportunity: 8 giai đoạn</h3>
-      <p class="lead-p">Sau khi Convert, hồ sơ chuyển thành Opportunity và đi qua 8 giai đoạn cho đến khi ghi danh:</p>
+      <p class="lead-p">Sau khi Convert, hồ sơ chuyển thành Opportunity và đi qua 8 giai đoạn cho đến khi ghi danh. Stage của Opportunity do <strong>hệ thống tự động cập nhật</strong>:</p>
       <div class="stage-grid">
         <div class="stage-card"><div class="stage-num">1</div><h4>Qualification</h4><p>Đang quan tâm, tìm hiểu. Chưa tham quan, chưa thi đầu vào.</p></div>
         <div class="stage-card"><div class="stage-num">2</div><h4>School Tour</h4><p>Đã đăng ký tham quan trường, hoặc đã tham quan nhưng chưa đăng ký thi.</p></div>
@@ -1355,17 +1357,18 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--navy-line);fo
 
       <h3><span class="ico-tile"><svg class="ico" aria-hidden="true"><use href="#i-list"/></svg></span> Các loại phản hồi (Case Record Type)</h3>
       <p class="lead-p">Khi tạo Case mới, Tư vấn TS phải chọn đúng Record Type. Chọn đúng thì hệ thống mới chuyển Case đến đúng bộ phận và phản hồi đúng kênh.</p>
+      <div class="note info"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg><div><strong>Ai xử lý:</strong> 4 loại <span class="tag navy">Attendance</span> <span class="tag navy">Drop Out</span> <span class="tag navy">Add-on Service</span> <span class="tag navy">Suspend / Cancel Service</span> do <strong>Tư vấn TS / Admin TS</strong> xử lý. Các loại còn lại chuyển cho <strong>Quản lý TS</strong>.</div></div>
       <div class="rt-grid">
-        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><strong>Attendance</strong><span>Nghỉ phép, nghỉ nửa ngày, về sớm, vào trễ.</span></div></div>
-        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-door"/></svg></span><div><strong>Drop Out</strong><span>Chuyển trường, không học nữa.</span></div></div>
-        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg></span><div><strong>Add-on Service</strong><span>Sinh nhật, học sinh tự ra về, đăng ký người đưa đón, xuống thư viện, làm thẻ học sinh, đổi nhà, đăng ký hoặc bổ sung suất ăn/xe bus/trung chuyển, xin bảng điểm, mượn hồ sơ.</span></div></div>
-        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><div><strong>Suspend / Cancel Service</strong><span>Tạm dừng hoặc hủy dịch vụ: xe bus, trung chuyển, suất ăn, bảo hiểm y tế (BHYT), các loại phí khác.</span></div></div>
-        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-refresh"/></svg></span><div><strong>Change Program / Change Class</strong><span>Đổi chương trình học, đổi ban, đổi lớp, chuyển giữa WASS, PENN và SISS.</span></div></div>
-        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></span><div><strong>Feedback / Teacher Feedback</strong><span>Thắc mắc, phản ánh, góp ý. Teacher Feedback dùng khi nội dung liên quan đến giáo viên.</span></div></div>
-        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg></span><div><strong>Incident</strong><span>Báo và xử lý sự cố.</span></div></div>
-        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-settings"/></svg></span><div><strong>Software Support</strong><span>Hỗ trợ IT, phần mềm, ứng dụng SPS360.</span></div></div>
-        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span><div><strong>Meeting Requests</strong><span>Đặt lịch gặp BGH (Ban giám hiệu), GVBM, GVTL; họp phụ huynh.</span></div></div>
-        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg></span><div><strong>Request exam application</strong><span>Xin xem bài thi.</span></div></div>
+        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><strong>Attendance</strong><span>Nghỉ phép, nghỉ nửa ngày, về sớm, vào trễ.</span><br><span class="tag navy">Tư vấn TS / Admin TS xử lý</span></div></div>
+        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-door"/></svg></span><div><strong>Drop Out</strong><span>Chuyển trường, không học nữa.</span><br><span class="tag navy">Tư vấn TS / Admin TS xử lý</span></div></div>
+        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg></span><div><strong>Add-on Service</strong><span>Sinh nhật, học sinh tự ra về, đăng ký người đưa đón, xuống thư viện, làm thẻ học sinh, đổi nhà, đăng ký hoặc bổ sung suất ăn/xe bus/trung chuyển, xin bảng điểm, mượn hồ sơ.</span><br><span class="tag navy">Tư vấn TS / Admin TS xử lý</span></div></div>
+        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></span><div><strong>Suspend / Cancel Service</strong><span>Tạm dừng hoặc hủy dịch vụ: xe bus, trung chuyển, suất ăn, bảo hiểm y tế (BHYT), các loại phí khác.</span><br><span class="tag navy">Tư vấn TS / Admin TS xử lý</span></div></div>
+        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-refresh"/></svg></span><div><strong>Change Program / Change Class</strong><span>Đổi chương trình học, đổi ban, đổi lớp, chuyển giữa WASS, PENN và SISS.</span><br><span class="tag gold">Chuyển Quản lý TS</span></div></div>
+        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></span><div><strong>Feedback / Teacher Feedback</strong><span>Thắc mắc, phản ánh, góp ý. Teacher Feedback dùng khi nội dung liên quan đến giáo viên.</span><br><span class="tag gold">Chuyển Quản lý TS</span></div></div>
+        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg></span><div><strong>Incident</strong><span>Báo và xử lý sự cố.</span><br><span class="tag gold">Chuyển Quản lý TS</span></div></div>
+        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-settings"/></svg></span><div><strong>Software Support</strong><span>Hỗ trợ IT, phần mềm, ứng dụng SPS360.</span><br><span class="tag gold">Chuyển Quản lý TS</span></div></div>
+        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span><div><strong>Meeting Requests</strong><span>Đặt lịch gặp BGH (Ban giám hiệu), GVBM, GVTL; họp phụ huynh.</span><br><span class="tag gold">Chuyển Quản lý TS</span></div></div>
+        <div class="rt-card"><span class="ico-tile soft"><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg></span><div><strong>Request exam application</strong><span>Xin xem bài thi.</span><br><span class="tag gold">Chuyển Quản lý TS</span></div></div>
       </div>
 
 
